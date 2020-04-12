@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ include "geoserver-chart.fullname" . }}
+  name: {{ include "postgres.fullname" . }}
   labels:
-    {{- include "geoserver-chart.labels" . | nindent 4 }}
+    {{- include "postgres.labels" . | nindent 4 }}
 spec:
   selector:
     matchLabels:
-      {{- include "geoserver-chart.selectorLabels" . | nindent 6 }}
-  serviceName: "geoserver"
+      {{- include "postgres.selectorLabels" . | nindent 6 }}
+  serviceName: "postgres"
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       labels:
-        {{- include "geoserver-chart.selectorLabels" . | nindent 8 }}
+        {{- include "postgres.selectorLabels" . | nindent 8 }}
     spec:
       terminationGracePeriodSeconds: 10
       containers:
@@ -24,14 +24,21 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
           - name: http
-            containerPort: 80
+            containerPort: {{ .Values.service.port }}
             protocol: TCP
         volumeMounts:
-        - name: www
-          mountPath: /geoserver_data/data
+          - mountPath: /var/lib/postgresql/data/pgdata 
+            name: postgresdatadefault
+        env:
+          - name: POSTGRES_USER
+            value: "geoserver"
+          - name: POSTGRES_PASSWORD
+            value: "supersecret"
+          - name: PGDATA
+            value: /var/lib/postgresql/data/pgdata
   volumeClaimTemplates:
   - metadata:
-      name: www
+      name: postgresdatadefault
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
