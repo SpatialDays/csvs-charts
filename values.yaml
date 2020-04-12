@@ -70,3 +70,4 @@ affinity: {}
 pv:
   local:
     hostPath: /c/Users/Davide.DeLerma/projects/kube_geoserver_dir/
+    storageClassName: manual

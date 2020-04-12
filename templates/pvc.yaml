@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: geoserverdata
 spec:
-  storageClassName: manual
+  storageClassName: {{ .Values.pv.local.storageClassName }}
   accessModes:
     - ReadWriteMany
   resources:

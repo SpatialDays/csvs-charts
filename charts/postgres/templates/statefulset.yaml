@@ -41,6 +41,7 @@ spec:
       name: postgresdatadefault
     spec:
       accessModes: [ "ReadWriteOnce" ]
+      storageClassName: {{ .Values.pv.local.storageClassName }}
       resources:
         requests:
           storage: 1Gi
