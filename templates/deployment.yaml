@@ -22,7 +22,9 @@ spec:
           - mountPath: "/geoserver_data/data"
             name: geoserverdata
         ports:
-        - containerPort: 80
+        - name: http
+          containerPort: {{ .Values.service.port }}
+          protocol: TCP
       volumes:
         - name: geoserverdata
           persistentVolumeClaim:
