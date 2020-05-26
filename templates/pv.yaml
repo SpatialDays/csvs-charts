@@ -8,8 +8,8 @@ spec:
   storageClassName: {{ .Values.pv.local.storageClassName }}
   capacity:
     storage: 15Gi
-  # accessModes:
-  #   - ReadWriteMany
+  accessModes:
+    - ReadWriteOnce
   persistentVolumeReclaimPolicy: Delete
   # hostPath:
   #   path: "{{ .Values.pv.local.hostPath }}"
