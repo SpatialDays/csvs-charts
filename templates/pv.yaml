@@ -1,15 +1,15 @@
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: geoserverdata
-  labels:
-    type: local
-spec:
-  storageClassName: {{ .Values.pv.local.storageClassName }}
-  capacity:
-    storage: 15Gi
-  accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Delete
-  # hostPath:
-  #   path: "{{ .Values.pv.local.hostPath }}"
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+#   name: geoserverdata
+#   labels:
+#     type: local
+# spec:
+#   storageClassName: {{ .Values.pv.local.storageClassName }}
+#   capacity:
+#     storage: 15Gi
+#   accessModes:
+#     - ReadWriteOnce
+#   persistentVolumeReclaimPolicy: Delete
+#   # hostPath:
+#   #   path: "{{ .Values.pv.local.hostPath }}"

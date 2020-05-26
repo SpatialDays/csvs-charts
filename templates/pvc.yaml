@@ -3,9 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: geoserverdata
 spec:
-  storageClassName: {{ .Values.pv.local.storageClassName }}
+  storageClassName: fast
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 15Gi
+      storage: 5Gi
