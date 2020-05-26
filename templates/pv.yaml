@@ -11,5 +11,5 @@ spec:
   # accessModes:
   #   - ReadWriteMany
   persistentVolumeReclaimPolicy: Delete
-  hostPath:
-    path: "{{ .Values.pv.local.hostPath }}"
+  # hostPath:
+  #   path: "{{ .Values.pv.local.hostPath }}"
