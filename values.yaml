@@ -33,13 +33,13 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 8080
 
 ingress:
-  enabled: true
-  annotations: 
-    kubernetes.io/ingress.class: nginx
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: kubernetes.docker.internal
@@ -72,5 +72,5 @@ affinity: {}
 
 pv:
   local:
-    hostPath: /c/Users/Davide.DeLerma/projects/kube_geoserver_dir/
-    storageClassName: manual
+    # hostPath: /c/Users/Davide.DeLerma/projects/kube_geoserver_dir/
+    storageClassName: fast

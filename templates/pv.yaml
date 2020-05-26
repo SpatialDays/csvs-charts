@@ -7,9 +7,9 @@ metadata:
 spec:
   storageClassName: {{ .Values.pv.local.storageClassName }}
   capacity:
-    storage: 1Gi
-  accessModes:
-    - ReadWriteMany
+    storage: 15Gi
+  # accessModes:
+  #   - ReadWriteMany
   persistentVolumeReclaimPolicy: Delete
   hostPath:
     path: "{{ .Values.pv.local.hostPath }}"
