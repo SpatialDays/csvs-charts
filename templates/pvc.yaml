@@ -5,7 +5,7 @@ metadata:
 spec:
   storageClassName: {{ .Values.pv.local.storageClassName }}
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 15Gi
