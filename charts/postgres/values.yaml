@@ -67,7 +67,7 @@ tolerations: []
 
 affinity: {}
 
-pv:
-  local:
-    postgresPath: /c/Users/Davide.DeLerma/projects/kube_postgres_dir/
-    storageClassName: hostpath
+pvc:
+  remote:
+    name: dev-postgres-csvs
+    

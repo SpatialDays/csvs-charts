@@ -15,7 +15,7 @@ spec:
       labels:
         {{- include "postgres.selectorLabels" . | nindent 8 }}
     spec:
-      terminationGracePeriodSeconds: 10
+
       containers:
       - name: {{ .Chart.Name }}
         securityContext:
@@ -26,9 +26,12 @@ spec:
           - name: http
             containerPort: {{ .Values.service.port }}
             protocol: TCP
+
         volumeMounts:
           - mountPath: /var/lib/postgresql/data/pgdata 
-            name: postgresdatadefault
+            name: {{ .Values.pvc.remote.name }}
+            subPath: postgres-db
+
         env:
           - name: POSTGRES_USER
             value: "geoserver"
@@ -36,12 +39,12 @@ spec:
             value: "supersecret"
           - name: PGDATA
             value: /var/lib/postgresql/data/pgdata
+
   volumeClaimTemplates:
-  - metadata:
-      name: postgresdatadefault
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      storageClassName: {{ .Values.pv.local.storageClassName }}
-      resources:
-        requests:
-          storage: 1Gi
+    - metadata:
+        name: {{ .Values.pvc.remote.name }}
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 1Gi
