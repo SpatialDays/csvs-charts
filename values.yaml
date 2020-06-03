@@ -76,3 +76,14 @@ pvc:
     namespace: dev-csvs
     name: dev-geoserver-csvs
     
+livenessProbe:
+  enabled: true
+  initialDelaySeconds: 60
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+
+readinessProbe:
+  enabled: true
+
