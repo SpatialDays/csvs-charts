@@ -2,14 +2,12 @@ name: Lint and Kube validation
 
 on:
   pull_request:
-    paths:
-      - "charts/**"
+    branches:
+      - master
   push:
     branches:
       - master
-    paths:
-      - "charts/**"
-    
+
 jobs:
   linting:
     runs-on: ubuntu-latest
