@@ -1,31 +1,38 @@
-name: CI
+name: Lint and Kube validation
 
 on:
   pull_request:
-    branches: [master]
+    paths:
+      - "charts/**"
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  lint-chart:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-      # Setup Helm v2.16.0
-      - name: Setup Helm v2.16.0
-        run: |
-          curl -LO https://get.helm.sh/helm-v2.16.0-linux-amd64.tar.gz
-          tar -zxvf helm-v2.16.0-linux-amd64.tar.gz
-          ./linux-amd64/helm init --client-only
-      # Runs Helm linter
-      - name: Run Linter
-        run: ./linux-amd64/helm lint .
+      - name: Fetch history
+        run: git fetch --prune --unshallow
 
-      # Create Package
-      - name: Create Helm package
-        run: ./linux-amd64/helm package .
+      - name: Run chart-testing (lint)
+        id: lint
+        # Support for Helm 2 is on branch dev-v2.
+        uses: helm/chart-testing-action@dev-v2
+        with:
+          command: lint
+
+  kubeval-chart:
+    runs-on: ubuntu-latest
+    needs:
+      - lint-chart
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Kubernetes toolset
+        uses: stefanprodan/kube-tools@v1.5.0
+        with:
+          kubectl: 1.15.10
+          helm: 2.16.0
+          command: helm template . | kubeval -v 1.15.0
