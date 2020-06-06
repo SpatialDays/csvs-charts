@@ -6,11 +6,17 @@ replicaCount: 1
 
 image:
   repository: davidedelerma/geoserver
+  tag: "1.1"
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
+
+cronjob:
+  repository: satapps/geoserver-backup
+  tag: "sha-be266da"
+  pullPolicy: IfNotPresent
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -87,3 +93,19 @@ livenessProbe:
 readinessProbe:
   enabled: true
 
+geoserverUsername: admin
+geoserverPassword: geoserver
+awsAccessKeyId: test
+awsSecretAccessKey: test
+s3url: http://s3-uk-1.sa-catapult.co.uk
+s3bucket: csvs-backups
+namespace: dev
+
+postgres:
+  postgresqlUsername: geoserver
+  postgresqlPassword: supersecret
+  awsAccessKeyId: test
+  awsSecretAccessKey: test
+  s3url: http://s3-uk-1.sa-catapult.co.uk
+  s3bucket: csvs-backups
+  namespace: dev

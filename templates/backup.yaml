@@ -1,0 +1,46 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: geoserver-backup
+spec:
+  schedule: "0 0 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: geoserver-backup
+            image: "{{ .Values.cronjob.repository }}:{{ .Values.cronjob.tag }}"
+            imagePullPolicy: {{ .Values.cronjob.pullPolicy }}
+            env:
+                - name: AWS_ACCESS_KEY_ID
+                  valueFrom:
+                    secretKeyRef:
+                      name: {{ include "geoserver-chart.fullname" . }}
+                      key: aws-access-key-id
+                - name: AWS_SECRET_ACCESS_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: {{ include "geoserver-chart.fullname" . }}
+                      key: aws-secret-access-key
+                - name: S3_BUCKET
+                  value: {{ .Values.s3bucket }}
+                - name: AWS_DEFAULT_REGION
+                  value: eu-west-1
+                - name: GEOSERVER_USERNAME
+                  valueFrom:
+                    secretKeyRef:
+                      name: {{ include "geoserver-chart.fullname" . }}
+                      key: geoserver-username
+                - name: GEOSERVER_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: {{ include "geoserver-chart.fullname" . }}
+                      key: geoserver-password
+                - name: S3_URL
+                  value: {{ .Values.s3url }}
+                - name: GEOSERVER_URL
+                  value: "http://{{ include "geoserver-chart.fullname" . }}:{{ .Values.service.port }}"
+                - name: NAMESPACE
+                  value: {{ .Values.namespace }}
+          restartPolicy: OnFailure
