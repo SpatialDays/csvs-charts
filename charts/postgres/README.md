@@ -2,9 +2,9 @@ postgres
 ========
 A Helm chart for Kubernetes
 
-Current chart version is `0.1.0`
+Current chart version is `0.2.0`
 
-
+Source code can be found [here](https://github.com/SatelliteApplicationsCatapult/helm-geoserver-postgres)
 
 
 
@@ -13,6 +13,11 @@ Current chart version is `0.1.0`
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
+| awsAccessKeyId | string | `"test"` |  |
+| awsSecretAccessKey | string | `"test"` |  |
+| cronjob.pullPolicy | string | `"IfNotPresent"` |  |
+| cronjob.repository | string | `"satapps/postgres-backup"` |  |
+| cronjob.tag | string | `"sha-319c345"` |  |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"mdillon/postgis"` |  |
@@ -29,6 +34,7 @@ Current chart version is `0.1.0`
 | livenessProbe.successThreshold | int | `1` |  |
 | livenessProbe.timeoutSeconds | int | `5` |  |
 | nameOverride | string | `""` |  |
+| namespace | string | `"dev"` |  |
 | nodeSelector | object | `{}` |  |
 | podSecurityContext | object | `{}` |  |
 | postgresqlPassword | string | `"supersecret"` |  |
@@ -36,6 +42,8 @@ Current chart version is `0.1.0`
 | pvc.remote.name | string | `"dev-postgres-csvs"` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
+| s3bucket | string | `"csvs-backups"` |  |
+| s3url | string | `"http://s3-uk-1.sa-catapult.co.uk"` |  |
 | securityContext | object | `{}` |  |
 | service.port | int | `5432` |  |
 | service.type | string | `"ClusterIP"` |  |
