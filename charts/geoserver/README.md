@@ -1,28 +1,10 @@
-Geoserver
-=======================
-
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
-![](https://github.com/SatelliteApplicationsCatapult/csvs-charts/workflows/release/badge.svg)
-![Release](https://github.com/SatelliteApplicationsCatapult/csvs-charts/workflows/Release/badge.svg)
-
+geoserver
+=========
 A Helm chart for Kubernetes
 
-## Usage
+Current chart version is `0.1.0`
 
-1. Install [Helm](https://helm.sh). For more information, see [Helm documentation](https://helm.sh/docs/).
-
-2. Add the csvs-charts Helm repository:
-
-```console
-$ helm repo add csvs-charts https://SatelliteApplicationsCatapult.github.io/csvs-charts
-$ helm repo update
-```
-
-3. View csvs-charts Helm charts:
-
- ```console
- $ helm search csvs-charts
- ```
+Source code can be found [here](http://geoserver.org/)
 
 
 
@@ -41,7 +23,6 @@ $ helm repo update
 | geoserverUsername | string | `"admin"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"davidedelerma/geoserver"` |  |
-| image.tag | string | `"1.1"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.enabled | bool | `false` |  |
