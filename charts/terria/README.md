@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.3.0`
+Current chart version is `0.4.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -38,10 +38,10 @@ Source code can be found [here](https://terria.io/)
 | image.repository | string | `"satapps/terriamap"` |  |
 | image.tag | string | `""` |  |
 | imagePullSecrets | list | `[]` |  |
-| ingress.annotations | object | `{}` |  |
-| ingress.enabled | bool | `false` |  |
-| ingress.hosts[0].host | string | `"chart-example.local"` |  |
-| ingress.hosts[0].paths | list | `[]` |  |
+| ingress.annotations."kubernetes.io/ingress.class" | string | `"nginx"` |  |
+| ingress.enabled | bool | `true` |  |
+| ingress.hosts[0].host | string | `"dev-csvs.sa-catapult.co.uk"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/"` |  |
 | ingress.tls | list | `[]` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
@@ -51,7 +51,7 @@ Source code can be found [here](https://terria.io/)
 | resources | object | `{}` |  |
 | securityContext | object | `{}` |  |
 | service.port | int | `3001` |  |
-| service.type | string | `"LoadBalancer"` |  |
+| service.type | string | `"ClusterIP"` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
 | serviceAccount.name | string | `""` |  |

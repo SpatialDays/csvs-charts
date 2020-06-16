@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for Kubernetes
 
-Current chart version is `0.1.0`
+Current chart version is `0.2.0`
 
 Source code can be found [here](http://geoserver.org/)
 
@@ -24,10 +24,10 @@ Source code can be found [here](http://geoserver.org/)
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"davidedelerma/geoserver"` |  |
 | imagePullSecrets | list | `[]` |  |
-| ingress.annotations | object | `{}` |  |
-| ingress.enabled | bool | `false` |  |
-| ingress.hosts[0].host | string | `"kubernetes.docker.internal"` |  |
-| ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| ingress.annotations."kubernetes.io/ingress.class" | string | `"nginx"` |  |
+| ingress.enabled | bool | `true` |  |
+| ingress.hosts[0].host | string | `"dev-csvs.sa-catapult.co.uk"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/geoserver"` |  |
 | ingress.tls | list | `[]` |  |
 | livenessProbe.enabled | bool | `true` |  |
 | livenessProbe.failureThreshold | int | `6` |  |
@@ -56,7 +56,7 @@ Source code can be found [here](http://geoserver.org/)
 | s3url | string | `"http://s3-uk-1.sa-catapult.co.uk"` |  |
 | securityContext | object | `{}` |  |
 | service.port | int | `8080` |  |
-| service.type | string | `"LoadBalancer"` |  |
+| service.type | string | `"ClusterIP"` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
 | serviceAccount.name | string | `nil` |  |
