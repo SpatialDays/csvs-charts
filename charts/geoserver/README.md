@@ -1,8 +1,8 @@
 geoserver
 =========
-A Helm chart for Kubernetes
+A Helm chart for deploying GeoServer
 
-Current chart version is `0.2.0`
+Current chart version is `0.2.1`
 
 Source code can be found [here](http://geoserver.org/)
 
