@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for deploying GeoServer
 
-Current chart version is `0.3.0`
+Current chart version is `0.4.0`
 
 Source code can be found [here](http://geoserver.org/)
 
@@ -36,6 +36,9 @@ Source code can be found [here](http://geoserver.org/)
 | livenessProbe.periodSeconds | int | `10` |  |
 | livenessProbe.successThreshold | int | `1` |  |
 | livenessProbe.timeoutSeconds | int | `5` |  |
+| local.enabled | bool | `false` |  |
+| local.hostPath | string | `"/c/Users/Davide.DeLerma/projects/kube_geoserver_dir/"` |  |
+| local.storageClassName | string | `"manual"` |  |
 | nameOverride | string | `""` |  |
 | namespace | string | `"dev"` |  |
 | nodeSelector | object | `{}` |  |

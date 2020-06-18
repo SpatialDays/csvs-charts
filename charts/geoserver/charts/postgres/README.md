@@ -2,7 +2,7 @@ postgres
 ========
 A Helm chart for Kubernetes
 
-Current chart version is `0.2.2`
+Current chart version is `0.3.1`
 
 Source code can be found [here](https://postgis.net/)
 
@@ -34,6 +34,7 @@ Source code can be found [here](https://postgis.net/)
 | livenessProbe.periodSeconds | int | `10` |  |
 | livenessProbe.successThreshold | int | `1` |  |
 | livenessProbe.timeoutSeconds | int | `5` |  |
+| local.enabled | bool | `false` |  |
 | nameOverride | string | `""` |  |
 | namespace | string | `"dev"` |  |
 | nodeSelector | object | `{}` |  |
