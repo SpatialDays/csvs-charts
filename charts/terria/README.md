@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.5.4`
+Current chart version is `0.5.5`
 
 Source code can be found [here](https://terria.io/)
 
