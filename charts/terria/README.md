@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.5.6`
+Current chart version is `0.6.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -13,8 +13,7 @@ Source code can be found [here](https://terria.io/)
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
-| authentication.authData | string | `"foo: $2y$10$mgU3C0jwc/IY168nIM5i7.Cld/y6NZsi6JLCh84i5RacV7pxwPimK\nbaz: $2y$10$mgU3C0jwc/IY168nIM5i7.Cld/y6NZsi6JLCh84i5RacV7pxwPimK\n"` |  |
-| authentication.enabled | bool | `true` |  |
+| authentication.enabled | bool | `false` |  |
 | autoscaling.enabled | bool | `false` |  |
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
