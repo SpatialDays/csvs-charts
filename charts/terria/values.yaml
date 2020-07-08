@@ -103,10 +103,3 @@ clientConfig:
     mobileDefaultViewerMode: "2d"
     experimentalFeatures: true
     useCesiumIonTerrain: false
-
-serverConfig:
-  port: 3001
-  allowProxyFor: ["dev-csvs-geoserver"]
-  blacklistedAddresses: []
-  initPaths:
-  - "/etc/config/client"
