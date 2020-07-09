@@ -103,3 +103,5 @@ clientConfig:
     mobileDefaultViewerMode: "2d"
     experimentalFeatures: true
     useCesiumIonTerrain: false
+
+geoserverCredentials: "admin:geoserver"
