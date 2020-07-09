@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for deploying GeoServer
 
-Current chart version is `0.8.0`
+Current chart version is `0.9.0`
 
 Source code can be found [here](http://geoserver.org/)
 
@@ -15,10 +15,14 @@ Source code can be found [here](http://geoserver.org/)
 | affinity | object | `{}` |  |
 | awsAccessKeyId | string | `"test"` |  |
 | awsSecretAccessKey | string | `"test"` |  |
-| cronjob.pullPolicy | string | `"IfNotPresent"` |  |
-| cronjob.repository | string | `"satapps/geoserver-backup"` |  |
-| cronjob.tag | string | `"sha-be266da"` |  |
-| cronjob.ttlSecondsAfterFinished | int | `3600` |  |
+| backup.enabled | bool | `false` |  |
+| backup.namespace | string | `"dev"` |  |
+| backup.pullPolicy | string | `"IfNotPresent"` |  |
+| backup.repository | string | `"satapps/geoserver-backup"` |  |
+| backup.s3bucket | string | `"csvs-backups"` |  |
+| backup.s3url | string | `"http://s3-uk-1.sa-catapult.co.uk"` |  |
+| backup.tag | string | `"sha-be266da"` |  |
+| backup.ttlSecondsAfterFinished | int | `3600` |  |
 | fullnameOverride | string | `""` |  |
 | geoserverPassword | string | `"geoserver"` |  |
 | geoserverUsername | string | `"admin"` |  |
@@ -40,7 +44,6 @@ Source code can be found [here](http://geoserver.org/)
 | local.hostPath | string | `"/c/Users/Davide.DeLerma/projects/kube_geoserver_dir/"` |  |
 | local.storageClassName | string | `"manual"` |  |
 | nameOverride | string | `""` |  |
-| namespace | string | `"dev"` |  |
 | nodeSelector | object | `{}` |  |
 | podSecurityContext | object | `{}` |  |
 | postgres.awsAccessKeyId | string | `"test"` |  |
@@ -58,8 +61,6 @@ Source code can be found [here](http://geoserver.org/)
 | readinessProbe.enabled | bool | `true` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
-| s3bucket | string | `"csvs-backups"` |  |
-| s3url | string | `"http://s3-uk-1.sa-catapult.co.uk"` |  |
 | securityContext | object | `{}` |  |
 | service.port | int | `8080` |  |
 | service.type | string | `"ClusterIP"` |  |
