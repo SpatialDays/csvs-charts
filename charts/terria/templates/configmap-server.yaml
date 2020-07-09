@@ -8,5 +8,11 @@ data:
   serverconfig.json: |-
       {
         "port": {{ .Values.service.port }},
-        "allowProxyFor": ["{{ .Release.Namespace }}-geoserver"]
+        "allowProxyFor": ["{{ .Release.Namespace }}-geoserver:8080"],
+        "blacklistedAddresses": [],
+        "proxyAuth": {
+          "{{ .Release.Namespace }}-geoserver:8080": {
+              "authorization": "Basic {{ .Values.geoserverCredentials | b64enc }}"
+          }
+        }
       }
