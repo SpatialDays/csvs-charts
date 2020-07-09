@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.9.2`
+Current chart version is `0.10.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -35,6 +35,7 @@ Source code can be found [here](https://terria.io/)
 | clientConfig.parameters.supportEmail | string | `"help@example.com"` |  |
 | clientConfig.parameters.useCesiumIonTerrain | bool | `false` |  |
 | fullnameOverride | string | `""` |  |
+| geoserverCredentials | string | `"admin:geoserver"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"satapps/terriamap"` |  |
 | image.tag | string | `""` |  |
