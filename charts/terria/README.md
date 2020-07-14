@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.10.1`
+Current chart version is `0.11.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -44,8 +44,20 @@ Source code can be found [here](https://terria.io/)
 | ingress.annotations."nginx.ingress.kubernetes.io/rewrite-target" | string | `"/$1"` |  |
 | ingress.enabled | bool | `true` |  |
 | ingress.hosts[0].host | string | `"dev-csvs.sa-catapult.co.uk"` |  |
-| ingress.hosts[0].paths[0].path | string | `"/terria/(.*)"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/terria-solomon/(.*)"` |  |
 | ingress.tls | list | `[]` |  |
+| initConfig.catalog[0].geoserverWorkspace | string | `"solomon"` |  |
+| initConfig.catalog[0].groupDescription | string | `"This group contains DRR vector data for Solomon Island"` |  |
+| initConfig.catalog[0].groupName | string | `"DRR"` |  |
+| initConfig.catalog[0].groupType | string | `"wfs-getCapabilities"` |  |
+| initConfig.catalog[1].geoserverWorkspace | string | `"solomon_rasters"` |  |
+| initConfig.catalog[1].groupDescription | string | `"This group contains maps of Hazard for Solomon Island"` |  |
+| initConfig.catalog[1].groupName | string | `"Hazard data"` |  |
+| initConfig.catalog[1].groupType | string | `"wms-getCapabilities"` |  |
+| initConfig.homeCamera.east | int | `177` |  |
+| initConfig.homeCamera.north | int | `-5` |  |
+| initConfig.homeCamera.south | int | `-24` |  |
+| initConfig.homeCamera.west | int | `152` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |
