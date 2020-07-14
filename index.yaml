@@ -3,6 +3,20 @@ entries:
   geoserver:
   - apiVersion: v1
     appVersion: "1.3"
+    created: "2020-07-14T09:48:39.189094945Z"
+    description: A Helm chart for deploying GeoServer
+    digest: 5b873d26b101127027f29ec7e2eaf01911520d7865ab3d32089bdd2f3287be32
+    home: http://geoserver.org/
+    maintainers:
+    - email: davide.delerma@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: geoserver
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/geoserver-0.10.0/geoserver-0.10.0.tgz
+    version: 0.10.0
+  - apiVersion: v1
+    appVersion: "1.3"
     created: "2020-07-09T16:13:24.682711516Z"
     description: A Helm chart for deploying GeoServer
     digest: be59fbb2f02c3f2cb1e3f25a7eafacdf4ba02d4adb706265dbe44e2d7d7d7b46
@@ -226,6 +240,20 @@ entries:
     - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/geoserver-0.1.0/geoserver-0.1.0.tgz
     version: 0.1.0
   terria:
+  - apiVersion: v1
+    appVersion: sha-b26725d
+    created: "2020-07-14T09:48:39.306785534Z"
+    description: A Helm chart for terria map
+    digest: 5bccec9d0b11e3087522490e90974450dab306d6579554f71312c21882b2e254
+    home: https://terria.io/
+    maintainers:
+    - email: davide.delerma@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: terria
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/terria-0.10.1/terria-0.10.1.tgz
+    version: 0.10.1
   - apiVersion: v1
     appVersion: sha-b26725d
     created: "2020-07-09T16:13:24.773910141Z"
