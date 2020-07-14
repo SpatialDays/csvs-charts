@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for deploying GeoServer
 
-Current chart version is `0.9.1`
+Current chart version is `0.10.0`
 
 Source code can be found [here](http://geoserver.org/)
 
@@ -16,7 +16,7 @@ Source code can be found [here](http://geoserver.org/)
 | awsAccessKeyId | string | `"test"` |  |
 | awsSecretAccessKey | string | `"test"` |  |
 | backup.enabled | bool | `false` |  |
-| backup.namespace | string | `"dev"` |  |
+| backup.namespace | string | `"dev-csvs"` |  |
 | backup.pullPolicy | string | `"IfNotPresent"` |  |
 | backup.repository | string | `"satapps/geoserver-backup"` |  |
 | backup.s3bucket | string | `"csvs-backups"` |  |
@@ -48,14 +48,14 @@ Source code can be found [here](http://geoserver.org/)
 | podSecurityContext | object | `{}` |  |
 | postgres.awsAccessKeyId | string | `"test"` |  |
 | postgres.awsSecretAccessKey | string | `"test"` |  |
-| postgres.namespace | string | `"dev"` |  |
+| postgres.namespace | string | `"dev-csvs"` |  |
 | postgres.postgresqlPassword | string | `"supersecret"` |  |
 | postgres.postgresqlUsername | string | `"geoserver"` |  |
 | postgres.s3bucket | string | `"csvs-backups"` |  |
 | postgres.s3url | string | `"http://s3-uk-1.sa-catapult.co.uk"` |  |
 | pvc.rasters.enabled | bool | `false` |  |
-| pvc.rasters.name | string | `"dev-geoserver-csvs-rasters"` |  |
-| pvc.remote.name | string | `"dev-geoserver-csvs"` |  |
+| pvc.rasters.name | string | `"geoserver-rasters"` |  |
+| pvc.remote.name | string | `"geoserver"` |  |
 | pvc.remote.namespace | string | `"dev-csvs"` |  |
 | pvc.remote.storageClassName | string | `"fast"` |  |
 | readinessProbe.enabled | bool | `true` |  |

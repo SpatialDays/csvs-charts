@@ -2,7 +2,7 @@ postgres
 ========
 A Helm chart for Kubernetes
 
-Current chart version is `0.4.3`
+Current chart version is `0.5.0`
 
 Source code can be found [here](https://postgis.net/)
 
@@ -36,12 +36,12 @@ Source code can be found [here](https://postgis.net/)
 | livenessProbe.timeoutSeconds | int | `5` |  |
 | local.enabled | bool | `false` |  |
 | nameOverride | string | `""` |  |
-| namespace | string | `"dev"` |  |
+| namespace | string | `"dev-csvs"` |  |
 | nodeSelector | object | `{}` |  |
 | podSecurityContext | object | `{}` |  |
 | postgresqlPassword | string | `"supersecret"` |  |
 | postgresqlUsername | string | `"geoserver"` |  |
-| pvc.remote.name | string | `"dev-postgres-csvs"` |  |
+| pvc.remote.name | string | `"postgres"` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
 | s3bucket | string | `"csvs-backups"` |  |
