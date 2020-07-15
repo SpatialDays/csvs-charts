@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for deploying GeoServer
 
-Current chart version is `0.10.3`
+Current chart version is `0.11.0`
 
 Source code can be found [here](http://geoserver.org/)
 
@@ -24,8 +24,8 @@ Source code can be found [here](http://geoserver.org/)
 | backup.tag | string | `"sha-be266da"` |  |
 | backup.ttlSecondsAfterFinished | int | `3600` |  |
 | fullnameOverride | string | `""` |  |
-| geoserverPassword | string | `"geoserver"` |  |
-| geoserverUsername | string | `"admin"` |  |
+| geoserverPassword | string | `"test_password"` |  |
+| geoserverUsername | string | `"test_user"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"davidedelerma/geoserver"` |  |
 | imagePullSecrets | list | `[]` |  |
