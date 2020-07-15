@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.12.0`
+Current chart version is `0.13.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -33,6 +33,7 @@ Source code can be found [here](https://terria.io/)
 | clientConfig.parameters.mobileDefaultViewerMode | string | `"2d"` |  |
 | clientConfig.parameters.proj4ServiceBaseUrl | string | `"proj4def/"` |  |
 | clientConfig.parameters.supportEmail | string | `"help@example.com"` |  |
+| clientConfig.parameters.useCesiumIonBingImagery | bool | `false` |  |
 | clientConfig.parameters.useCesiumIonTerrain | bool | `false` |  |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
@@ -45,6 +46,7 @@ Source code can be found [here](https://terria.io/)
 | ingress.hosts[0].host | string | `"dev-csvs.sa-catapult.co.uk"` |  |
 | ingress.hosts[0].paths[0].path | string | `"/terria-solomon/(.*)"` |  |
 | ingress.tls | list | `[]` |  |
+| initConfig.baseMapName | string | `"Positron (Light)"` |  |
 | initConfig.catalog[0].geoserverWorkspace | string | `"solomon"` |  |
 | initConfig.catalog[0].groupDescription | string | `"This group contains DRR vector data for Solomon Island"` |  |
 | initConfig.catalog[0].groupName | string | `"DRR"` |  |
@@ -57,6 +59,7 @@ Source code can be found [here](https://terria.io/)
 | initConfig.homeCamera.north | int | `-5` |  |
 | initConfig.homeCamera.south | int | `-24` |  |
 | initConfig.homeCamera.west | int | `152` |  |
+| initConfig.viewMode | string | `"2d"` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |
