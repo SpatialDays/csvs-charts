@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.14.1`
+Current chart version is `0.15.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -47,14 +47,19 @@ Source code can be found [here](https://terria.io/)
 | ingress.hosts[0].paths[0].path | string | `"/terria-solomon/(.*)"` |  |
 | ingress.tls | list | `[]` |  |
 | initConfig.baseMapName | string | `"Positron (Light)"` |  |
-| initConfig.catalog[0].geoserverWorkspace | string | `"solomon"` |  |
-| initConfig.catalog[0].groupDescription | string | `"This group contains DRR vector data for Solomon Island"` |  |
-| initConfig.catalog[0].groupName | string | `"DRR"` |  |
-| initConfig.catalog[0].groupType | string | `"wfs-getCapabilities"` |  |
+| initConfig.catalog[0].description | string | `"This group contains DRR vector data for Solomon Island"` |  |
+| initConfig.catalog[0].name | string | `"DRR"` |  |
+| initConfig.catalog[0].type | string | `"wfs-getCapabilities"` |  |
+| initConfig.catalog[0].url | string | `"http://geoserver:8080/geoserver/solomon/ows?service=wfs&version=2.0.0&request=GetCapabilities"` |  |
+| initConfig.catalog[1].description | string | `"This group contains maps of Hazard for Solomon Island"` |  |
 | initConfig.catalog[1].geoserverWorkspace | string | `"solomon_rasters"` |  |
-| initConfig.catalog[1].groupDescription | string | `"This group contains maps of Hazard for Solomon Island"` |  |
-| initConfig.catalog[1].groupName | string | `"Hazard data"` |  |
-| initConfig.catalog[1].groupType | string | `"wms-getCapabilities"` |  |
+| initConfig.catalog[1].name | string | `"Hazard data"` |  |
+| initConfig.catalog[1].type | string | `"wms-getCapabilities"` |  |
+| initConfig.catalog[1].url | string | `"http://geoserver:8080/geoserver/solomon_rasters/wms?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[2].description | string | `"This group contains DEMs for Solomon Island provided by University of Portsmouth"` |  |
+| initConfig.catalog[2].name | string | `"DEMs"` |  |
+| initConfig.catalog[2].type | string | `"wms-getCapabilities"` |  |
+| initConfig.catalog[2].url | string | `"http://geoserver:8080/geoserver/solomon_dems/wms?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
 | initConfig.homeCamera.east | int | `177` |  |
 | initConfig.homeCamera.north | int | `-5` |  |
 | initConfig.homeCamera.south | int | `-24` |  |
