@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.15.0`
+Current chart version is `0.16.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -64,7 +64,7 @@ Source code can be found [here](https://terria.io/)
 | initConfig.homeCamera.north | int | `-5` |  |
 | initConfig.homeCamera.south | int | `-24` |  |
 | initConfig.homeCamera.west | int | `152` |  |
-| initConfig.viewMode | string | `"2d"` |  |
+| initConfig.viewerMode | string | `"2d"` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |
