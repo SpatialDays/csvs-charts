@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.16.0`
+Current chart version is `0.17.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -21,7 +21,7 @@ Source code can be found [here](https://terria.io/)
 | clientConfig.initializationUrls[0] | string | `"terria"` |  |
 | clientConfig.parameters.appName | string | `"Terria Map"` |  |
 | clientConfig.parameters.brandBarElements[0] | string | `""` |  |
-| clientConfig.parameters.brandBarElements[1] | string | `"<a target=\"_blank\" href=\"http://terria.io\"><img src=\"images/terria_logo.png\" height=\"52\" title=\"Version: {{version}}\" /></a>"` |  |
+| clientConfig.parameters.brandBarElements[1] | string | `"<a target=\"_blank\" href=\"http://terria.io\"><img src=\"images/SI_high.png\" height=\"52\" title=\"Version: {{version}}\" /></a>"` |  |
 | clientConfig.parameters.brandBarElements[2] | string | `""` |  |
 | clientConfig.parameters.disclaimer.text | string | `"Disclaimer: This map must not be used for navigation or precise spatial analysis"` |  |
 | clientConfig.parameters.disclaimer.url | string | `""` |  |
