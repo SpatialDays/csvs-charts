@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.17.0`
+Current chart version is `0.18.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -38,7 +38,7 @@ Source code can be found [here](https://terria.io/)
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"satapps/terriamap"` |  |
-| image.tag | string | `""` |  |
+| image.suffix | string | `"solomon"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations."kubernetes.io/ingress.class" | string | `"nginx"` |  |
 | ingress.annotations."nginx.ingress.kubernetes.io/rewrite-target" | string | `"/$1"` |  |
