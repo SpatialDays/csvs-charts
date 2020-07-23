@@ -87,3 +87,4 @@ spec:
           persistentVolumeClaim:
             claimName: {{ .Values.pvc.netcdf.name }}
         {{- end }}
+
