@@ -44,4 +44,3 @@ spec:
     requests:
       storage: 500Gi
 {{- end -}}
-
