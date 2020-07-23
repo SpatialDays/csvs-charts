@@ -23,6 +23,10 @@ spec:
           - mountPath: "/rasters_data"
             name: {{ .Values.pvc.rasters.name }}
         {{- end }}
+        {{- if .Values.pvc.netcdf.enabled }}
+          - mountPath: "/netcdf_data"
+            name: {{ .Values.pvc.netcdf.name }}
+        {{- end }}
         env:
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
