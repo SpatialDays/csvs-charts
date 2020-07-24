@@ -29,7 +29,7 @@ spec:
     requests:
       storage: 5Gi
 {{- end -}}
----
+
 {{- if .Values.pvc.netcdf.enabled -}}
 apiVersion: v1
 kind: PersistentVolumeClaim
