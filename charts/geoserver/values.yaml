@@ -75,8 +75,8 @@ affinity: {}
 
 sidecar:
   image:
-    repository: davidedelerma/geoserver-commands
-    tag: 0.4
+    repository: satapps/geoserver-commands
+    tag: 0.5
     pullPolicy: IfNotPresent
 
 backup:
@@ -102,6 +102,9 @@ pvc:
   rasters:
     enabled: false
     name: geoserver-rasters
+  netcdf:
+    enabled: false
+    name: geoserver-netcdf
 
 local:
   enabled: false
