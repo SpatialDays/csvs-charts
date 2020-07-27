@@ -75,8 +75,8 @@ affinity: {}
 
 sidecar:
   image:
-    repository: davidedelerma/geoserver-commands
-    tag: 0.4
+    repository: satapps/geoserver-commands
+    tag: 0.5
     pullPolicy: IfNotPresent
 
 backup:
