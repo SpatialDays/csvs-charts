@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for deploying GeoServer
 
-Current chart version is `0.13.2`
+Current chart version is `0.14.0`
 
 Source code can be found [here](http://geoserver.org/)
 
@@ -60,6 +60,7 @@ Source code can be found [here](http://geoserver.org/)
 | pvc.remote.name | string | `"geoserver"` |  |
 | pvc.remote.namespace | string | `"dev-csvs"` |  |
 | pvc.remote.storageClassName | string | `"fast"` |  |
+| rbac.create | bool | `true` |  |
 | readinessProbe.enabled | bool | `true` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
