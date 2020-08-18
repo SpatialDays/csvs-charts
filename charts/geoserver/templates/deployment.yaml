@@ -19,6 +19,8 @@ spec:
         image: "{{ .Values.sidecar.image.repository }}:{{ .Values.sidecar.image.tag }}"
         imagePullPolicy: {{ .Values.sidecar.image.pullPolicy }}
         volumeMounts:
+          - mountPath: "/geoserver_data/data"
+            name:  {{ .Values.pvc.remote.name }}
         {{- if .Values.pvc.rasters.enabled }}
           - mountPath: "/rasters_data"
             name: {{ .Values.pvc.rasters.name }}
