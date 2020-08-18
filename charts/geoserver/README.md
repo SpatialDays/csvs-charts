@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for deploying GeoServer
 
-Current chart version is `0.16.1`
+Current chart version is `0.17.0`
 
 Source code can be found [here](http://geoserver.org/)
 
@@ -72,5 +72,5 @@ Source code can be found [here](http://geoserver.org/)
 | serviceAccount.name | string | `nil` |  |
 | sidecar.image.pullPolicy | string | `"IfNotPresent"` |  |
 | sidecar.image.repository | string | `"satapps/geoserver-commands"` |  |
-| sidecar.image.tag | float | `0.6` |  |
+| sidecar.image.tag | float | `0.7` |  |
 | tolerations | list | `[]` |  |
