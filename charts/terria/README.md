@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.20.0`
+Current chart version is `0.21.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -59,10 +59,14 @@ Source code can be found [here](https://terria.io/)
 | initConfig.catalog[2].name | string | `"DEMs"` |  |
 | initConfig.catalog[2].type | string | `"wms-getCapabilities"` |  |
 | initConfig.catalog[2].url | string | `"http://geoserver:8080/geoserver/solomon_dems/wms?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
-| initConfig.catalog[3].description | string | `"This group contains ERA5 climate data for Solomon Island provided by Met Office"` |  |
-| initConfig.catalog[3].name | string | `"ERA5 Climate data"` |  |
+| initConfig.catalog[3].description | string | `"This group contains ERA5 30 years average climate data for Solomon Island provided by Met Office"` |  |
+| initConfig.catalog[3].name | string | `"ERA5 30 years average Climate data"` |  |
 | initConfig.catalog[3].type | string | `"wms-getCapabilities"` |  |
-| initConfig.catalog[3].url | string | `"http://geoserver:8080/geoserver/netcdf/wms?service=WMS&version=1.3.0&TILED=true&request=GetCapabilities"` |  |
+| initConfig.catalog[3].url | string | `"http://geoserver:8080/geoserver/climate_30yrs/wms?service=WMS&version=1.3.0&TILED=true&request=GetCapabilities"` |  |
+| initConfig.catalog[4].description | string | `"This group contains ERA5 monthly climate data for Solomon Island provided by Met Office"` |  |
+| initConfig.catalog[4].name | string | `"ERA5 Monthly Climate data"` |  |
+| initConfig.catalog[4].type | string | `"wms-getCapabilities"` |  |
+| initConfig.catalog[4].url | string | `"http://geoserver:8080/geoserver/climate_monthly/wms?service=WMS&version=1.3.0&TILED=true&request=GetCapabilities"` |  |
 | initConfig.homeCamera.east | int | `177` |  |
 | initConfig.homeCamera.north | int | `-5` |  |
 | initConfig.homeCamera.south | int | `-24` |  |
