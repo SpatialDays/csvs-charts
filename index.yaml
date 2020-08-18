@@ -508,6 +508,20 @@ entries:
   terria:
   - apiVersion: v1
     appVersion: master-sha-ef0cf81
+    created: "2020-08-18T11:32:55.321976431Z"
+    description: A Helm chart for terria map
+    digest: 8f3a8c51dcd98b9400c5f9257543994b147be077fac01f35981ba4fb96d9e2a0
+    home: https://terria.io/
+    maintainers:
+    - email: davide.delerma@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: terria
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/terria-0.21.1/terria-0.21.1.tgz
+    version: 0.21.1
+  - apiVersion: v1
+    appVersion: master-sha-ef0cf81
     created: "2020-08-18T08:31:45.401918529Z"
     description: A Helm chart for terria map
     digest: f3291a8869a7f761ddb8667cb0af8c2805d0acd33c82e6f2c8a0e931bbf8838e
