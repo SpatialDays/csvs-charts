@@ -20,6 +20,9 @@ sidecar:
     tag: 0.1
     pullPolicy: IfNotPresent
 
+awsAccessKeyId: test
+awsSecretAccessKey: test
+
 pvc:
   configuration:
     storageClassName: fast

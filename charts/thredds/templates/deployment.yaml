@@ -60,9 +60,15 @@ spec:
             name:  {{ .Values.pvc.netcdfDaily2.name }}
           env:
           - name: AWS_ACCESS_KEY_ID
-            value : 307282071fcfef61a70d
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "thredds.fullname" . }}
+                key: aws-access-key-id
           - name: AWS_SECRET_ACCESS_KEY
-            value: y+w07ahZjvaaF6TNy8uhr82xj2ksy7nLhknTmIGW
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "thredds.fullname" . }}
+                key: aws-secret-access-key
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
