@@ -52,11 +52,11 @@ spec:
           image: "{{ .Values.sidecar.image.repository }}:{{ .Values.sidecar.image.tag }}"
           imagePullPolicy: {{ .Values.sidecar.image.pullPolicy }}
           volumeMounts:
-          - mountPath: "/usr/local/monthly-yearly-data"
+          - mountPath: "/era5_data/monthly_30years"
             name:  {{ .Values.pvc.netcdfMontlyYearly.name }}
-          - mountPath: "/usr/local/daily-1-data"
+          - mountPath: "/era5_data/daily_1"
             name:  {{ .Values.pvc.netcdfDaily1.name }}
-          - mountPath: "/usr/local/daily-2-data"
+          - mountPath: "/era5_data/daily_2"
             name:  {{ .Values.pvc.netcdfDaily2.name }}
           env:
           - name: AWS_ACCESS_KEY_ID
@@ -71,11 +71,11 @@ spec:
           volumeMounts:
           - mountPath: "/usr/local/tomcat/content"
             name:  {{ .Values.pvc.configuration.name }}
-          - mountPath: "/usr/local/monthly-yearly-data"
+          - mountPath: "/era5_data/monthly_30years"
             name:  {{ .Values.pvc.netcdfMontlyYearly.name }}
-          - mountPath: "/usr/local/daily-1-data"
+          - mountPath: "/era5_data/daily_1"
             name:  {{ .Values.pvc.netcdfDaily1.name }}
-          - mountPath: "/usr/local/daily-2-data"
+          - mountPath: "/era5_data/daily_2"
             name:  {{ .Values.pvc.netcdfDaily2.name }}
           ports:
             - name: liveness-port
