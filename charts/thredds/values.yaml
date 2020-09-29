@@ -16,8 +16,8 @@ fullnameOverride: ""
 
 sidecar:
   image:
-    repository: satapps/geoserver-commands
-    tag: 0.7
+    repository: satapps/csvs-thredds-sidecar
+    tag: 0.1
     pullPolicy: IfNotPresent
 
 pvc:
