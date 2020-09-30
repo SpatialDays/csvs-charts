@@ -2,7 +2,7 @@ thredds
 =======
 A Helm chart for Kubernetes
 
-Current chart version is `0.1.2`
+Current chart version is `0.3.0`
 
 Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 
@@ -17,6 +17,8 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
+| awsAccessKeyId | string | `"test"` |  |
+| awsSecretAccessKey | string | `"test"` |  |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"unidata/thredds-docker"` |  |
@@ -37,9 +39,18 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |
 | podSecurityContext | object | `{}` |  |
-| pvc.name | string | `"thredds"` |  |
-| pvc.namespace | string | `"dev-csvs"` |  |
-| pvc.storageClassName | string | `"fast"` |  |
+| pvc.configuration.name | string | `"thredds"` |  |
+| pvc.configuration.namespace | string | `"dev-csvs"` |  |
+| pvc.configuration.storageClassName | string | `"fast"` |  |
+| pvc.netcdfDaily1.name | string | `"era5-data-daily-part-1"` |  |
+| pvc.netcdfDaily1.namespace | string | `"dev-csvs"` |  |
+| pvc.netcdfDaily1.storageClassName | string | `"fast"` |  |
+| pvc.netcdfDaily2.name | string | `"era5-data-daily-part-2"` |  |
+| pvc.netcdfDaily2.namespace | string | `"dev-csvs"` |  |
+| pvc.netcdfDaily2.storageClassName | string | `"fast"` |  |
+| pvc.netcdfMontlyYearly.name | string | `"era5-data-monthly-yearly"` |  |
+| pvc.netcdfMontlyYearly.namespace | string | `"dev-csvs"` |  |
+| pvc.netcdfMontlyYearly.storageClassName | string | `"fast"` |  |
 | readinessProbe.enabled | bool | `true` |  |
 | readinessProbe.failureThreshold | int | `6` |  |
 | readinessProbe.initialDelaySeconds | int | `15` |  |
@@ -54,4 +65,7 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
 | serviceAccount.name | string | `""` |  |
+| sidecar.image.pullPolicy | string | `"IfNotPresent"` |  |
+| sidecar.image.repository | string | `"satapps/geoserver-commands"` |  |
+| sidecar.image.tag | float | `0.7` |  |
 | tolerations | list | `[]` |  |
