@@ -2,7 +2,7 @@ thredds
 =======
 A Helm chart for Kubernetes
 
-Current chart version is `0.3.0`
+Current chart version is `0.4.0`
 
 Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 
@@ -48,6 +48,9 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | pvc.netcdfDaily2.name | string | `"era5-data-daily-part-2"` |  |
 | pvc.netcdfDaily2.namespace | string | `"dev-csvs"` |  |
 | pvc.netcdfDaily2.storageClassName | string | `"fast"` |  |
+| pvc.netcdfDaily3.name | string | `"era5-data-daily-part-3"` |  |
+| pvc.netcdfDaily3.namespace | string | `"dev-csvs"` |  |
+| pvc.netcdfDaily3.storageClassName | string | `"fast"` |  |
 | pvc.netcdfMontlyYearly.name | string | `"era5-data-monthly-yearly"` |  |
 | pvc.netcdfMontlyYearly.namespace | string | `"dev-csvs"` |  |
 | pvc.netcdfMontlyYearly.storageClassName | string | `"fast"` |  |
