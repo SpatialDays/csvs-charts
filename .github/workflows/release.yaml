@@ -32,7 +32,7 @@ jobs:
       - linting
     steps:
       - uses: actions/checkout@v2
-      - name: Kubernetes toolset
+      - name: Kubernetes Validator
         uses: desaintmartin/helm-kubeval-action@master
         with:
           path: ./charts
