@@ -29,8 +29,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Kubernetes toolset
-        uses: stefanprodan/kube-tools@v1
+        uses: desaintmartin/helm-kubeval-action@master
         with:
-          kubectl: 1.18.8
-          helmv3: 3.2.3
-          command: for chart in charts/*/; do helmv3 template "$chart" | kubeval --strict; done
+          path: ./helm-charts
