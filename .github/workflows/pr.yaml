@@ -30,9 +30,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Kubernetes toolset
-        uses: stefanprodan/kube-tools@v1.5.0
-        with:
-          kubectl: 1.15.10
-          helm: 2.16.0
-          command: for chart in charts/*/; do helm template "$chart" | kubeval -v 1.15.0; done
+      - name: Kubernetes validation
+        uses: instrumenta/kubeval-action@master
