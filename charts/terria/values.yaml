@@ -1910,6 +1910,7 @@ initConfig:
       name: "ERA5 30year TotalPrecip"
       type: "wms"
       url: "http://thredds:8080/thredds/wms/30year/ERA5_30year_TotalPrecip.nc?service=WMS&version=1.3.0&request=GetCapabilities"
+
 serverConfig:
   port: 3001
   allowProxyFor:
