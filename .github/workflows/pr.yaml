@@ -27,12 +27,10 @@ jobs:
     needs:
       - linting
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
+      - uses: actions/checkout@v2
       - name: Kubernetes toolset
-        uses: stefanprodan/kube-tools@v1.5.0
+        uses: stefanprodan/kube-tools@v1
         with:
-          kubectl: 1.15.10
-          helm: 2.16.0
-          command: for chart in charts/*/; do helm template "$chart" | kubeval -v 1.15.0; done
+          kubectl: 1.18.8
+          helmv3: 3.2.3
+          command: for chart in charts/*/; do helmv3 template "$chart" | kubeval --strict; done
