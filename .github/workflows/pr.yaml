@@ -31,4 +31,4 @@ jobs:
       - name: Kubernetes toolset
         uses: desaintmartin/helm-kubeval-action@master
         with:
-          path: ./helm-charts
+          path: ./charts
