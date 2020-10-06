@@ -2,7 +2,7 @@ thredds
 =======
 A Helm chart for Kubernetes
 
-Current chart version is `0.6.1`
+Current chart version is `0.7.0`
 
 Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 
@@ -29,7 +29,7 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | ingress.hosts[0].host | string | `"chart-example.local"` |  |
 | ingress.hosts[0].paths | list | `[]` |  |
 | ingress.tls | list | `[]` |  |
-| livenessProbe.enabled | bool | `true` |  |
+| livenessProbe.enabled | bool | `false` |  |
 | livenessProbe.failureThreshold | int | `6` |  |
 | livenessProbe.initialDelaySeconds | int | `15` |  |
 | livenessProbe.periodSeconds | int | `10` |  |
@@ -54,7 +54,7 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | pvc.netcdfMontlyYearly.name | string | `"era5-data-monthly-yearly"` |  |
 | pvc.netcdfMontlyYearly.namespace | string | `"dev-csvs"` |  |
 | pvc.netcdfMontlyYearly.storageClassName | string | `"fast"` |  |
-| readinessProbe.enabled | bool | `true` |  |
+| readinessProbe.enabled | bool | `false` |  |
 | readinessProbe.failureThreshold | int | `6` |  |
 | readinessProbe.initialDelaySeconds | int | `15` |  |
 | readinessProbe.periodSeconds | int | `10` |  |
@@ -68,7 +68,8 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
 | serviceAccount.name | string | `""` |  |
+| sidecar.awsConcurrentRequests | int | `1` |  |
 | sidecar.image.pullPolicy | string | `"IfNotPresent"` |  |
-| sidecar.image.repository | string | `"satapps/geoserver-commands"` |  |
+| sidecar.image.repository | string | `"satapps/csvs-thredds-sidecar"` |  |
 | sidecar.image.tag | float | `0.7` |  |
 | tolerations | list | `[]` |  |

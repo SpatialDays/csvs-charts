@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for deploying GeoServer
 
-Current chart version is `0.18.13`
+Current chart version is `0.19.0`
 
 Source code can be found [here](http://geoserver.org/)
 
@@ -53,8 +53,6 @@ Source code can be found [here](http://geoserver.org/)
 | postgres.postgresqlUsername | string | `"geoserver"` |  |
 | postgres.s3bucket | string | `"csvs-backups"` |  |
 | postgres.s3url | string | `"http://s3-uk-1.sa-catapult.co.uk"` |  |
-| pvc.netcdf.enabled | bool | `false` |  |
-| pvc.netcdf.name | string | `"geoserver-netcdf"` |  |
 | pvc.rasters.enabled | bool | `false` |  |
 | pvc.rasters.name | string | `"geoserver-rasters"` |  |
 | pvc.remote.name | string | `"geoserver"` |  |
