@@ -21,7 +21,7 @@ fullnameOverride: ""
 sidecar:
   image:
     repository: satapps/csvs-thredds-sidecar
-    tag: 0.7
+    tag: 0.8
     pullPolicy: IfNotPresent
   awsConcurrentRequests: 1
 

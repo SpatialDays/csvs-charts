@@ -85,15 +85,6 @@ spec:
               resources:
                 requests:
                   storage: 200Gi
-          - metadata:
-              name: {{ .Values.pvc.era5LandDaily3.name }}
-            spec:
-              storageClassName: {{ .Values.pvc.era5LandDaily3.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 200Gi
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -138,8 +129,6 @@ spec:
             name:  {{ .Values.pvc.era5LandDaily1.name }}
           - mountPath: "/usr/local/era5-land/daily-2-data"
             name:  {{ .Values.pvc.era5LandDaily2.name }}
-          - mountPath: "/usr/local/era5-land/daily-3-data"
-            name:  {{ .Values.pvc.era5LandDaily3.name }}
           env:
           - name: CONCURRENT_REQUESTS
             value: {{ .Values.sidecar.awsConcurrentRequests | quote }}
@@ -175,8 +164,6 @@ spec:
             name:  {{ .Values.pvc.era5LandDaily1.name }}
           - mountPath: "/usr/local/era5-land/daily-2-data"
             name:  {{ .Values.pvc.era5LandDaily2.name }}
-          - mountPath: "/usr/local/era5-land/daily-3-data"
-            name:  {{ .Values.pvc.era5LandDaily3.name }}
           ports:
             - name: liveness-port
               containerPort: {{ .Values.service.port }}
