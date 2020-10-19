@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.27.00`
+Current chart version is `0.28.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -2793,14 +2793,20 @@ Source code can be found [here](https://terria.io/)
 | initConfig.catalog[4].preserveOrder | bool | `true` |  |
 | initConfig.catalog[4].type | string | `"group"` |  |
 | initConfig.catalog[5].isOpen | bool | `false` |  |
+| initConfig.catalog[5].items[0].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[5].items[0].colorScaleMinimum | int | `-50` |  |
 | initConfig.catalog[5].items[0].featureInfoTemplate | string | `"<p>ERA5 30year 2mTemp</p><chart src=\"http://thredds:8080/thredds/ncss/30year/ERA5_30year_2mTemp.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1979-01-16T11:30:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
 | initConfig.catalog[5].items[0].layers | string | `"t2m"` |  |
 | initConfig.catalog[5].items[0].name | string | `"ERA5 30year 2mTemp"` |  |
+| initConfig.catalog[5].items[0].styles | string | `"boxfill/red-yellow"` |  |
 | initConfig.catalog[5].items[0].type | string | `"wms"` |  |
 | initConfig.catalog[5].items[0].url | string | `"http://thredds:8080/thredds/wms/30year/ERA5_30year_2mTemp.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[5].items[1].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[5].items[1].colorScaleMinimum | int | `0` |  |
 | initConfig.catalog[5].items[1].featureInfoTemplate | string | `"<p>ERA5 30year RH</p><chart src=\"http://thredds:8080/thredds/ncss/30year/ERA5_30year_RH.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1979-01-16T11:30:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
 | initConfig.catalog[5].items[1].layers | string | `"t2m"` |  |
 | initConfig.catalog[5].items[1].name | string | `"ERA5 30year RH"` |  |
+| initConfig.catalog[5].items[1].styles | string | `"boxfill/green-purple"` |  |
 | initConfig.catalog[5].items[1].type | string | `"wms"` |  |
 | initConfig.catalog[5].items[1].url | string | `"http://thredds:8080/thredds/wms/30year/ERA5_30year_RH.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
 | initConfig.catalog[5].items[2].featureInfoTemplate | string | `"<p>ERA5 30year SST</p><chart src=\"http://thredds:8080/thredds/ncss/30year/ERA5_30year_SST.nc?var=sst&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1979-01-16T11:30:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
@@ -2808,34 +2814,52 @@ Source code can be found [here](https://terria.io/)
 | initConfig.catalog[5].items[2].name | string | `"ERA5 30year SST"` |  |
 | initConfig.catalog[5].items[2].type | string | `"wms"` |  |
 | initConfig.catalog[5].items[2].url | string | `"http://thredds:8080/thredds/wms/30year/ERA5_30year_SST.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[5].items[3].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[5].items[3].colorScaleMinimum | int | `0` |  |
 | initConfig.catalog[5].items[3].featureInfoTemplate | string | `"<p>ERA5 30year TotalWind</p><chart src=\"http://thredds:8080/thredds/ncss/30year/ERA5_30year_TotalWind.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1979-01-16T11:30:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
 | initConfig.catalog[5].items[3].layers | string | `"u10"` |  |
 | initConfig.catalog[5].items[3].name | string | `"ERA5 30year TotalWind"` |  |
+| initConfig.catalog[5].items[3].styles | string | `"boxfill/rainbow"` |  |
 | initConfig.catalog[5].items[3].type | string | `"wms"` |  |
 | initConfig.catalog[5].items[3].url | string | `"http://thredds:8080/thredds/wms/30year/ERA5_30year_TotalWind.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[5].items[4].colorScaleMaximum | int | `104000` |  |
+| initConfig.catalog[5].items[4].colorScaleMinimum | int | `96500` |  |
 | initConfig.catalog[5].items[4].featureInfoTemplate | string | `"<p>ERA5 30year mslp</p><chart src=\"http://thredds:8080/thredds/ncss/30year/ERA5_30year_mslp.nc?var=msl&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1979-01-16T11:30:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
 | initConfig.catalog[5].items[4].layers | string | `"msl"` |  |
 | initConfig.catalog[5].items[4].name | string | `"ERA5 30year mslp"` |  |
+| initConfig.catalog[5].items[4].styles | string | `"boxfill/green-purple"` |  |
 | initConfig.catalog[5].items[4].type | string | `"wms"` |  |
 | initConfig.catalog[5].items[4].url | string | `"http://thredds:8080/thredds/wms/30year/ERA5_30year_mslp.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[5].items[5].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[5].items[5].colorScaleMinimum | int | `-50` |  |
 | initConfig.catalog[5].items[5].featureInfoTemplate | string | `"<p>ERA5 30year soil temp 1</p><chart src=\"http://thredds:8080/thredds/ncss/30year/ERA5_30year_soil_temp_1.nc?var=stl1&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1979-01-16T11:30:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
 | initConfig.catalog[5].items[5].layers | string | `"stl1"` |  |
 | initConfig.catalog[5].items[5].name | string | `"ERA5 30year soil temp 1"` |  |
+| initConfig.catalog[5].items[5].styles | string | `"boxfill/red-yellow"` |  |
 | initConfig.catalog[5].items[5].type | string | `"wms"` |  |
 | initConfig.catalog[5].items[5].url | string | `"http://thredds:8080/thredds/wms/30year/ERA5_30year_soil_temp_1.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[5].items[6].colorScaleMaximum | int | `1` |  |
+| initConfig.catalog[5].items[6].colorScaleMinimum | int | `0` |  |
 | initConfig.catalog[5].items[6].featureInfoTemplate | string | `"<p>ERA5 30year soil water 1</p><chart src=\"http://thredds:8080/thredds/ncss/30year/ERA5_30year_soil_water_1.nc?var=swvl1&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1979-01-16T11:30:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
 | initConfig.catalog[5].items[6].layers | string | `"swvl1"` |  |
 | initConfig.catalog[5].items[6].name | string | `"ERA5 30year soil water 1"` |  |
+| initConfig.catalog[5].items[6].styles | string | `"boxfill/green-purple"` |  |
 | initConfig.catalog[5].items[6].type | string | `"wms"` |  |
 | initConfig.catalog[5].items[6].url | string | `"http://thredds:8080/thredds/wms/30year/ERA5_30year_soil_water_1.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[5].items[7].colorScaleMaximum | int | `1291000` |  |
+| initConfig.catalog[5].items[7].colorScaleMinimum | int | `25860` |  |
 | initConfig.catalog[5].items[7].featureInfoTemplate | string | `"<p>ERA5 30year sol rad</p><chart src=\"http://thredds:8080/thredds/ncss/30year/ERA5_30year_sol_rad.nc?var=ssr&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1979-01-16T11:30:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
 | initConfig.catalog[5].items[7].layers | string | `"ssr"` |  |
 | initConfig.catalog[5].items[7].name | string | `"ERA5 30year sol rad"` |  |
+| initConfig.catalog[5].items[7].styles | string | `"boxfill/red-yellow"` |  |
 | initConfig.catalog[5].items[7].type | string | `"wms"` |  |
 | initConfig.catalog[5].items[7].url | string | `"http://thredds:8080/thredds/wms/30year/ERA5_30year_sol_rad.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[5].items[8].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[5].items[8].colorScaleMinimum | int | `0` |  |
 | initConfig.catalog[5].items[8].featureInfoTemplate | string | `"<p>ERA5 30year TotalPrecip</p><chart src=\"http://thredds:8080/thredds/ncss/30year/ERA5_30year_TotalPrecip.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1979-01-16T11:30:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
 | initConfig.catalog[5].items[8].layers | string | `"precipitation_rate"` |  |
 | initConfig.catalog[5].items[8].name | string | `"ERA5 30year TotalPrecip"` |  |
+| initConfig.catalog[5].items[8].styles | string | `"boxfill/blu-yellow"` |  |
 | initConfig.catalog[5].items[8].type | string | `"wms"` |  |
 | initConfig.catalog[5].items[8].url | string | `"http://thredds:8080/thredds/wms/30year/ERA5_30year_TotalPrecip.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
 | initConfig.catalog[5].name | string | `"ERA5 30year Average"` |  |
