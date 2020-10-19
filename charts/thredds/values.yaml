@@ -21,7 +21,7 @@ fullnameOverride: ""
 sidecar:
   image:
     repository: satapps/csvs-thredds-sidecar
-    tag: 0.7
+    tag: 0.8
     pullPolicy: IfNotPresent
   awsConcurrentRequests: 1
 
@@ -44,6 +44,10 @@ pvc:
     storageClassName: fast
   netcdfDaily3:
     name: era5-data-daily-part-3
+    namespace: dev-csvs
+    storageClassName: fast
+  era5LandData:
+    name: era5-land-data
     namespace: dev-csvs
     storageClassName: fast
 
