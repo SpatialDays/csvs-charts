@@ -59,27 +59,9 @@ spec:
                 requests:
                   storage: 200Gi
           - metadata:
-              name: {{ .Values.pvc.era5LandMontlyYearly.name }}
+              name: {{ .Values.pvc.era5LandData.name }}
             spec:
-              storageClassName: {{ .Values.pvc.era5LandMontlyYearly.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 200Gi
-          - metadata:
-              name: {{ .Values.pvc.era5LandDaily1.name }}
-            spec:
-              storageClassName: {{ .Values.pvc.era5LandDaily1.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 200Gi
-          - metadata:
-              name: {{ .Values.pvc.era5LandDaily2.name }}
-            spec:
-              storageClassName: {{ .Values.pvc.era5LandDaily2.storageClassName | quote }}
+              storageClassName: {{ .Values.pvc.era5LandData.storageClassName | quote }}
               accessModes:
                 - ReadWriteOnce
               resources:
@@ -123,12 +105,8 @@ spec:
             name:  {{ .Values.pvc.netcdfDaily2.name }}
           - mountPath: "/usr/local/daily-3-data"
             name:  {{ .Values.pvc.netcdfDaily3.name }}
-          - mountPath: "/usr/local/era5-land/monthly-yearly-data"
-            name:  {{ .Values.pvc.era5LandMontlyYearly.name }}
-          - mountPath: "/usr/local/era5-land/daily-1-data"
-            name:  {{ .Values.pvc.era5LandDaily1.name }}
-          - mountPath: "/usr/local/era5-land/daily-2-data"
-            name:  {{ .Values.pvc.era5LandDaily2.name }}
+          - mountPath: "/usr/local/era5-land"
+            name:  {{ .Values.pvc.era5LandData.name }}
           env:
           - name: CONCURRENT_REQUESTS
             value: {{ .Values.sidecar.awsConcurrentRequests | quote }}
@@ -158,12 +136,8 @@ spec:
             name:  {{ .Values.pvc.netcdfDaily2.name }}
           - mountPath: "/usr/local/daily-3-data"
             name:  {{ .Values.pvc.netcdfDaily3.name }}
-          - mountPath: "/usr/local/era5-land/monthly-yearly-data"
-            name:  {{ .Values.pvc.era5LandMontlyYearly.name }}
-          - mountPath: "/usr/local/era5-land/daily-1-data"
-            name:  {{ .Values.pvc.era5LandDaily1.name }}
-          - mountPath: "/usr/local/era5-land/daily-2-data"
-            name:  {{ .Values.pvc.era5LandDaily2.name }}
+          - mountPath: "/usr/local/era5-land"
+            name:  {{ .Values.pvc.era5LandData.name }}
           ports:
             - name: liveness-port
               containerPort: {{ .Values.service.port }}

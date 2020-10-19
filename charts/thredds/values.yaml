@@ -46,20 +46,8 @@ pvc:
     name: era5-data-daily-part-3
     namespace: dev-csvs
     storageClassName: fast
-  era5LandMontlyYearly:
-    name: era5-land-data-monthly-yearly
-    namespace: dev-csvs
-    storageClassName: fast
-  era5LandDaily1:
-    name: era5-land-data-daily-part-1
-    namespace: dev-csvs
-    storageClassName: fast
-  era5LandDaily2:
-    name: era5-land-data-daily-part-2
-    namespace: dev-csvs
-    storageClassName: fast
-  era5LandDaily3:
-    name: era5-land-data-daily-part-3
+  era5LandData:
+    name: era5-land-data
     namespace: dev-csvs
     storageClassName: fast
 
