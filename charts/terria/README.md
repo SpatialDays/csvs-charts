@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.28.2`
+Current chart version is `0.29.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -2865,6 +2865,1182 @@ Source code can be found [here](https://terria.io/)
 | initConfig.catalog[5].name | string | `"ERA5 30year Average"` |  |
 | initConfig.catalog[5].preserveOrder | bool | `true` |  |
 | initConfig.catalog[5].type | string | `"group"` |  |
+| initConfig.catalog[6].isOpen | bool | `false` |  |
+| initConfig.catalog[6].items[0].isOpen | bool | `false` |  |
+| initConfig.catalog[6].items[0].items[0].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[0].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[0].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1981</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1981.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1981-01-01T11:00:00Z&time_end=1981-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[0].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[0].name | string | `"ERA5-Land daily mean 2mTemp 1981"` |  |
+| initConfig.catalog[6].items[0].items[0].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[0].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[0].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1981.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[10].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[10].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[10].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1991</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1991.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1991-01-01T11:00:00Z&time_end=1991-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[10].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[10].name | string | `"ERA5-Land daily mean 2mTemp 1991"` |  |
+| initConfig.catalog[6].items[0].items[10].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[10].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[10].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1991.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[11].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[11].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[11].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1992</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1992.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1992-01-01T11:00:00Z&time_end=1992-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[11].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[11].name | string | `"ERA5-Land daily mean 2mTemp 1992"` |  |
+| initConfig.catalog[6].items[0].items[11].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[11].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[11].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1992.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[12].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[12].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[12].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1993</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1993.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1993-01-01T11:00:00Z&time_end=1993-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[12].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[12].name | string | `"ERA5-Land daily mean 2mTemp 1993"` |  |
+| initConfig.catalog[6].items[0].items[12].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[12].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[12].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1993.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[13].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[13].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[13].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1994</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1994.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1994-01-01T11:00:00Z&time_end=1994-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[13].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[13].name | string | `"ERA5-Land daily mean 2mTemp 1994"` |  |
+| initConfig.catalog[6].items[0].items[13].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[13].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[13].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1994.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[14].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[14].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[14].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1995</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1995.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1995-01-01T11:00:00Z&time_end=1995-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[14].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[14].name | string | `"ERA5-Land daily mean 2mTemp 1995"` |  |
+| initConfig.catalog[6].items[0].items[14].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[14].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[14].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1995.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[15].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[15].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[15].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1996</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1996.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1996-01-01T11:00:00Z&time_end=1996-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[15].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[15].name | string | `"ERA5-Land daily mean 2mTemp 1996"` |  |
+| initConfig.catalog[6].items[0].items[15].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[15].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[15].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1996.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[16].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[16].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[16].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1997</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1997.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1997-01-01T11:00:00Z&time_end=1997-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[16].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[16].name | string | `"ERA5-Land daily mean 2mTemp 1997"` |  |
+| initConfig.catalog[6].items[0].items[16].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[16].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[16].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1997.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[17].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[17].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[17].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1998</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1998.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1998-01-01T11:00:00Z&time_end=1998-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[17].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[17].name | string | `"ERA5-Land daily mean 2mTemp 1998"` |  |
+| initConfig.catalog[6].items[0].items[17].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[17].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[17].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1998.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[18].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[18].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[18].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1999</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1999.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1999-01-01T11:00:00Z&time_end=1999-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[18].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[18].name | string | `"ERA5-Land daily mean 2mTemp 1999"` |  |
+| initConfig.catalog[6].items[0].items[18].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[18].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[18].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1999.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[19].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[19].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[19].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2000</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2000.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2000-01-01T11:00:00Z&time_end=2000-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[19].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[19].name | string | `"ERA5-Land daily mean 2mTemp 2000"` |  |
+| initConfig.catalog[6].items[0].items[19].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[19].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[19].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2000.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[1].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[1].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[1].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1982</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1982.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1982-01-01T11:00:00Z&time_end=1982-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[1].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[1].name | string | `"ERA5-Land daily mean 2mTemp 1982"` |  |
+| initConfig.catalog[6].items[0].items[1].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[1].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[1].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1982.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[20].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[20].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[20].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2001</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2001.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2001-01-01T11:00:00Z&time_end=2001-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[20].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[20].name | string | `"ERA5-Land daily mean 2mTemp 2001"` |  |
+| initConfig.catalog[6].items[0].items[20].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[20].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[20].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2001.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[21].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[21].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[21].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2002</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2002.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2002-01-01T11:00:00Z&time_end=2002-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[21].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[21].name | string | `"ERA5-Land daily mean 2mTemp 2002"` |  |
+| initConfig.catalog[6].items[0].items[21].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[21].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[21].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2002.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[22].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[22].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[22].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2003</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2003.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2003-01-01T11:00:00Z&time_end=2003-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[22].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[22].name | string | `"ERA5-Land daily mean 2mTemp 2003"` |  |
+| initConfig.catalog[6].items[0].items[22].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[22].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[22].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2003.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[23].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[23].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[23].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2004</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2004.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2004-01-01T11:00:00Z&time_end=2004-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[23].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[23].name | string | `"ERA5-Land daily mean 2mTemp 2004"` |  |
+| initConfig.catalog[6].items[0].items[23].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[23].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[23].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2004.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[24].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[24].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[24].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2005</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2005.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2005-01-01T11:00:00Z&time_end=2005-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[24].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[24].name | string | `"ERA5-Land daily mean 2mTemp 2005"` |  |
+| initConfig.catalog[6].items[0].items[24].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[24].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[24].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2005.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[25].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[25].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[25].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2006</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2006.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2006-01-01T11:00:00Z&time_end=2006-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[25].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[25].name | string | `"ERA5-Land daily mean 2mTemp 2006"` |  |
+| initConfig.catalog[6].items[0].items[25].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[25].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[25].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2006.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[26].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[26].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[26].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2007</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2007.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2007-01-01T11:00:00Z&time_end=2007-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[26].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[26].name | string | `"ERA5-Land daily mean 2mTemp 2007"` |  |
+| initConfig.catalog[6].items[0].items[26].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[26].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[26].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2007.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[27].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[27].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[27].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2008</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2008.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2008-01-01T11:00:00Z&time_end=2008-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[27].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[27].name | string | `"ERA5-Land daily mean 2mTemp 2008"` |  |
+| initConfig.catalog[6].items[0].items[27].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[27].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[27].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2008.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[28].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[28].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[28].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2009</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2009.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2009-01-01T11:00:00Z&time_end=2009-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[28].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[28].name | string | `"ERA5-Land daily mean 2mTemp 2009"` |  |
+| initConfig.catalog[6].items[0].items[28].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[28].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[28].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2009.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[29].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[29].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[29].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2010</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2010.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2010-01-01T11:00:00Z&time_end=2010-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[29].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[29].name | string | `"ERA5-Land daily mean 2mTemp 2010"` |  |
+| initConfig.catalog[6].items[0].items[29].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[29].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[29].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2010.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[2].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[2].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[2].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1983</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1983.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1983-01-01T11:00:00Z&time_end=1983-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[2].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[2].name | string | `"ERA5-Land daily mean 2mTemp 1983"` |  |
+| initConfig.catalog[6].items[0].items[2].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[2].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[2].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1983.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[30].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[30].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[30].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2011</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2011.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2011-01-01T11:00:00Z&time_end=2011-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[30].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[30].name | string | `"ERA5-Land daily mean 2mTemp 2011"` |  |
+| initConfig.catalog[6].items[0].items[30].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[30].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[30].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2011.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[31].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[31].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[31].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2012</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2012.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2012-01-01T11:00:00Z&time_end=2012-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[31].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[31].name | string | `"ERA5-Land daily mean 2mTemp 2012"` |  |
+| initConfig.catalog[6].items[0].items[31].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[31].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[31].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2012.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[32].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[32].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[32].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2013</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2013.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2013-01-01T11:00:00Z&time_end=2013-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[32].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[32].name | string | `"ERA5-Land daily mean 2mTemp 2013"` |  |
+| initConfig.catalog[6].items[0].items[32].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[32].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[32].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2013.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[33].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[33].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[33].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2014</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2014.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2014-01-01T11:00:00Z&time_end=2014-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[33].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[33].name | string | `"ERA5-Land daily mean 2mTemp 2014"` |  |
+| initConfig.catalog[6].items[0].items[33].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[33].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[33].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2014.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[34].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[34].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[34].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2015</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2015.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2015-01-01T11:00:00Z&time_end=2015-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[34].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[34].name | string | `"ERA5-Land daily mean 2mTemp 2015"` |  |
+| initConfig.catalog[6].items[0].items[34].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[34].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[34].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2015.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[35].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[35].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[35].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2016</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2016.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2016-01-01T11:00:00Z&time_end=2016-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[35].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[35].name | string | `"ERA5-Land daily mean 2mTemp 2016"` |  |
+| initConfig.catalog[6].items[0].items[35].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[35].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[35].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2016.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[36].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[36].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[36].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2017</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2017.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2017-01-01T11:00:00Z&time_end=2017-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[36].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[36].name | string | `"ERA5-Land daily mean 2mTemp 2017"` |  |
+| initConfig.catalog[6].items[0].items[36].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[36].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[36].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2017.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[37].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[37].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[37].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2018</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2018.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2018-01-01T11:00:00Z&time_end=2018-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[37].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[37].name | string | `"ERA5-Land daily mean 2mTemp 2018"` |  |
+| initConfig.catalog[6].items[0].items[37].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[37].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[37].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2018.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[38].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[38].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[38].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 2019</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2019.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2019-01-01T11:00:00Z&time_end=2019-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[38].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[38].name | string | `"ERA5-Land daily mean 2mTemp 2019"` |  |
+| initConfig.catalog[6].items[0].items[38].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[38].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[38].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_2019.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[3].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[3].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[3].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1984</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1984.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1984-01-01T11:00:00Z&time_end=1984-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[3].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[3].name | string | `"ERA5-Land daily mean 2mTemp 1984"` |  |
+| initConfig.catalog[6].items[0].items[3].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[3].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[3].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1984.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[4].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[4].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[4].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1985</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1985.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1985-01-01T11:00:00Z&time_end=1985-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[4].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[4].name | string | `"ERA5-Land daily mean 2mTemp 1985"` |  |
+| initConfig.catalog[6].items[0].items[4].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[4].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[4].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1985.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[5].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[5].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[5].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1986</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1986.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1986-01-01T11:00:00Z&time_end=1986-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[5].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[5].name | string | `"ERA5-Land daily mean 2mTemp 1986"` |  |
+| initConfig.catalog[6].items[0].items[5].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[5].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[5].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1986.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[6].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[6].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[6].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1987</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1987.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1987-01-01T11:00:00Z&time_end=1987-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[6].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[6].name | string | `"ERA5-Land daily mean 2mTemp 1987"` |  |
+| initConfig.catalog[6].items[0].items[6].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[6].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[6].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1987.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[7].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[7].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[7].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1988</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1988.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1988-01-01T11:00:00Z&time_end=1988-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[7].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[7].name | string | `"ERA5-Land daily mean 2mTemp 1988"` |  |
+| initConfig.catalog[6].items[0].items[7].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[7].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[7].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1988.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[8].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[8].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[8].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1989</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1989.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1989-01-01T11:00:00Z&time_end=1989-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[8].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[8].name | string | `"ERA5-Land daily mean 2mTemp 1989"` |  |
+| initConfig.catalog[6].items[0].items[8].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[8].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[8].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1989.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].items[9].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[6].items[0].items[9].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[6].items[0].items[9].featureInfoTemplate | string | `"<p>ERA5-Land daily mean 2mTemp 1990</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1990.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1990-01-01T11:00:00Z&time_end=1990-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[0].items[9].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[0].items[9].name | string | `"ERA5-Land daily mean 2mTemp 1990"` |  |
+| initConfig.catalog[6].items[0].items[9].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[6].items[0].items[9].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[0].items[9].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_2mTemp/ERA5-Land_daily_mean_2mTemp_1990.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[0].name | string | `"ERA5-Land daily mean 2mTemp"` |  |
+| initConfig.catalog[6].items[0].preserveOrder | bool | `true` |  |
+| initConfig.catalog[6].items[0].type | string | `"group"` |  |
+| initConfig.catalog[6].items[1].isOpen | bool | `false` |  |
+| initConfig.catalog[6].items[1].items[0].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[0].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[0].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1981</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1981.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1981-01-01T11:00:00Z&time_end=1981-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[0].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[0].name | string | `"ERA5-Land daily mean RH 1981"` |  |
+| initConfig.catalog[6].items[1].items[0].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[0].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[0].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1981.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[10].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[10].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[10].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1991</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1991.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1991-01-01T11:00:00Z&time_end=1991-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[10].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[10].name | string | `"ERA5-Land daily mean RH 1991"` |  |
+| initConfig.catalog[6].items[1].items[10].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[10].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[10].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1991.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[11].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[11].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[11].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1992</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1992.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1992-01-01T11:00:00Z&time_end=1992-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[11].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[11].name | string | `"ERA5-Land daily mean RH 1992"` |  |
+| initConfig.catalog[6].items[1].items[11].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[11].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[11].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1992.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[12].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[12].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[12].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1993</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1993.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1993-01-01T11:00:00Z&time_end=1993-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[12].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[12].name | string | `"ERA5-Land daily mean RH 1993"` |  |
+| initConfig.catalog[6].items[1].items[12].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[12].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[12].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1993.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[13].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[13].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[13].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1994</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1994.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1994-01-01T11:00:00Z&time_end=1994-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[13].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[13].name | string | `"ERA5-Land daily mean RH 1994"` |  |
+| initConfig.catalog[6].items[1].items[13].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[13].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[13].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1994.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[14].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[14].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[14].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1995</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1995.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1995-01-01T11:00:00Z&time_end=1995-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[14].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[14].name | string | `"ERA5-Land daily mean RH 1995"` |  |
+| initConfig.catalog[6].items[1].items[14].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[14].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[14].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1995.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[15].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[15].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[15].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1996</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1996.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1996-01-01T11:00:00Z&time_end=1996-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[15].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[15].name | string | `"ERA5-Land daily mean RH 1996"` |  |
+| initConfig.catalog[6].items[1].items[15].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[15].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[15].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1996.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[16].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[16].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[16].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1997</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1997.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1997-01-01T11:00:00Z&time_end=1997-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[16].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[16].name | string | `"ERA5-Land daily mean RH 1997"` |  |
+| initConfig.catalog[6].items[1].items[16].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[16].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[16].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1997.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[17].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[17].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[17].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1998</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1998.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1998-01-01T11:00:00Z&time_end=1998-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[17].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[17].name | string | `"ERA5-Land daily mean RH 1998"` |  |
+| initConfig.catalog[6].items[1].items[17].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[17].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[17].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1998.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[18].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[18].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[18].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1999</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1999.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1999-01-01T11:00:00Z&time_end=1999-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[18].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[18].name | string | `"ERA5-Land daily mean RH 1999"` |  |
+| initConfig.catalog[6].items[1].items[18].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[18].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[18].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1999.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[19].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[19].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[19].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2000</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2000.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2000-01-01T11:00:00Z&time_end=2000-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[19].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[19].name | string | `"ERA5-Land daily mean RH 2000"` |  |
+| initConfig.catalog[6].items[1].items[19].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[19].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[19].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2000.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[1].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[1].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[1].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1982</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1982.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1982-01-01T11:00:00Z&time_end=1982-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[1].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[1].name | string | `"ERA5-Land daily mean RH 1982"` |  |
+| initConfig.catalog[6].items[1].items[1].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[1].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[1].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1982.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[20].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[20].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[20].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2001</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2001.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2001-01-01T11:00:00Z&time_end=2001-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[20].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[20].name | string | `"ERA5-Land daily mean RH 2001"` |  |
+| initConfig.catalog[6].items[1].items[20].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[20].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[20].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2001.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[21].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[21].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[21].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2002</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2002.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2002-01-01T11:00:00Z&time_end=2002-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[21].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[21].name | string | `"ERA5-Land daily mean RH 2002"` |  |
+| initConfig.catalog[6].items[1].items[21].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[21].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[21].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2002.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[22].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[22].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[22].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2003</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2003.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2003-01-01T11:00:00Z&time_end=2003-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[22].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[22].name | string | `"ERA5-Land daily mean RH 2003"` |  |
+| initConfig.catalog[6].items[1].items[22].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[22].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[22].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2003.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[23].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[23].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[23].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2004</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2004.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2004-01-01T11:00:00Z&time_end=2004-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[23].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[23].name | string | `"ERA5-Land daily mean RH 2004"` |  |
+| initConfig.catalog[6].items[1].items[23].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[23].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[23].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2004.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[24].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[24].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[24].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2005</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2005.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2005-01-01T11:00:00Z&time_end=2005-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[24].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[24].name | string | `"ERA5-Land daily mean RH 2005"` |  |
+| initConfig.catalog[6].items[1].items[24].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[24].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[24].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2005.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[25].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[25].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[25].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2006</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2006.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2006-01-01T11:00:00Z&time_end=2006-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[25].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[25].name | string | `"ERA5-Land daily mean RH 2006"` |  |
+| initConfig.catalog[6].items[1].items[25].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[25].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[25].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2006.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[26].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[26].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[26].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2007</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2007.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2007-01-01T11:00:00Z&time_end=2007-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[26].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[26].name | string | `"ERA5-Land daily mean RH 2007"` |  |
+| initConfig.catalog[6].items[1].items[26].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[26].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[26].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2007.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[27].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[27].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[27].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2008</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2008.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2008-01-01T11:00:00Z&time_end=2008-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[27].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[27].name | string | `"ERA5-Land daily mean RH 2008"` |  |
+| initConfig.catalog[6].items[1].items[27].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[27].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[27].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2008.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[28].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[28].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[28].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2009</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2009.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2009-01-01T11:00:00Z&time_end=2009-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[28].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[28].name | string | `"ERA5-Land daily mean RH 2009"` |  |
+| initConfig.catalog[6].items[1].items[28].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[28].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[28].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2009.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[29].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[29].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[29].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2010</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2010.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2010-01-01T11:00:00Z&time_end=2010-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[29].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[29].name | string | `"ERA5-Land daily mean RH 2010"` |  |
+| initConfig.catalog[6].items[1].items[29].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[29].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[29].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2010.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[2].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[2].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[2].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1983</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1983.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1983-01-01T11:00:00Z&time_end=1983-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[2].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[2].name | string | `"ERA5-Land daily mean RH 1983"` |  |
+| initConfig.catalog[6].items[1].items[2].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[2].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[2].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1983.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[30].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[30].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[30].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2011</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2011.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2011-01-01T11:00:00Z&time_end=2011-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[30].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[30].name | string | `"ERA5-Land daily mean RH 2011"` |  |
+| initConfig.catalog[6].items[1].items[30].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[30].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[30].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2011.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[31].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[31].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[31].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2012</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2012.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2012-01-01T11:00:00Z&time_end=2012-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[31].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[31].name | string | `"ERA5-Land daily mean RH 2012"` |  |
+| initConfig.catalog[6].items[1].items[31].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[31].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[31].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2012.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[32].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[32].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[32].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2013</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2013.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2013-01-01T11:00:00Z&time_end=2013-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[32].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[32].name | string | `"ERA5-Land daily mean RH 2013"` |  |
+| initConfig.catalog[6].items[1].items[32].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[32].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[32].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2013.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[33].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[33].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[33].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2014</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2014.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2014-01-01T11:00:00Z&time_end=2014-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[33].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[33].name | string | `"ERA5-Land daily mean RH 2014"` |  |
+| initConfig.catalog[6].items[1].items[33].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[33].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[33].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2014.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[34].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[34].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[34].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2015</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2015.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2015-01-01T11:00:00Z&time_end=2015-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[34].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[34].name | string | `"ERA5-Land daily mean RH 2015"` |  |
+| initConfig.catalog[6].items[1].items[34].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[34].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[34].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2015.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[35].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[35].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[35].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2016</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2016.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2016-01-01T11:00:00Z&time_end=2016-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[35].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[35].name | string | `"ERA5-Land daily mean RH 2016"` |  |
+| initConfig.catalog[6].items[1].items[35].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[35].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[35].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2016.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[36].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[36].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[36].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2017</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2017.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2017-01-01T11:00:00Z&time_end=2017-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[36].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[36].name | string | `"ERA5-Land daily mean RH 2017"` |  |
+| initConfig.catalog[6].items[1].items[36].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[36].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[36].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2017.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[37].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[37].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[37].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2018</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2018.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2018-01-01T11:00:00Z&time_end=2018-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[37].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[37].name | string | `"ERA5-Land daily mean RH 2018"` |  |
+| initConfig.catalog[6].items[1].items[37].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[37].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[37].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2018.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[38].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[38].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[38].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 2019</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2019.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2019-01-01T11:00:00Z&time_end=2019-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[38].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[38].name | string | `"ERA5-Land daily mean RH 2019"` |  |
+| initConfig.catalog[6].items[1].items[38].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[38].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[38].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_2019.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[3].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[3].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[3].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1984</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1984.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1984-01-01T11:00:00Z&time_end=1984-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[3].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[3].name | string | `"ERA5-Land daily mean RH 1984"` |  |
+| initConfig.catalog[6].items[1].items[3].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[3].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[3].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1984.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[4].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[4].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[4].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1985</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1985.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1985-01-01T11:00:00Z&time_end=1985-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[4].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[4].name | string | `"ERA5-Land daily mean RH 1985"` |  |
+| initConfig.catalog[6].items[1].items[4].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[4].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[4].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1985.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[5].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[5].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[5].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1986</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1986.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1986-01-01T11:00:00Z&time_end=1986-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[5].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[5].name | string | `"ERA5-Land daily mean RH 1986"` |  |
+| initConfig.catalog[6].items[1].items[5].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[5].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[5].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1986.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[6].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[6].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[6].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1987</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1987.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1987-01-01T11:00:00Z&time_end=1987-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[6].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[6].name | string | `"ERA5-Land daily mean RH 1987"` |  |
+| initConfig.catalog[6].items[1].items[6].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[6].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[6].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1987.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[7].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[7].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[7].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1988</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1988.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1988-01-01T11:00:00Z&time_end=1988-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[7].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[7].name | string | `"ERA5-Land daily mean RH 1988"` |  |
+| initConfig.catalog[6].items[1].items[7].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[7].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[7].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1988.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[8].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[8].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[8].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1989</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1989.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1989-01-01T11:00:00Z&time_end=1989-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[8].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[8].name | string | `"ERA5-Land daily mean RH 1989"` |  |
+| initConfig.catalog[6].items[1].items[8].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[8].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[8].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1989.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].items[9].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[6].items[1].items[9].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[1].items[9].featureInfoTemplate | string | `"<p>ERA5-Land daily mean RH 1990</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1990.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1990-01-01T11:00:00Z&time_end=1990-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[1].items[9].layers | string | `"t2m"` |  |
+| initConfig.catalog[6].items[1].items[9].name | string | `"ERA5-Land daily mean RH 1990"` |  |
+| initConfig.catalog[6].items[1].items[9].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[6].items[1].items[9].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[1].items[9].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_RH/ERA5-Land_daily_mean_RH_1990.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[1].name | string | `"ERA5-Land daily mean RH"` |  |
+| initConfig.catalog[6].items[1].preserveOrder | bool | `true` |  |
+| initConfig.catalog[6].items[1].type | string | `"group"` |  |
+| initConfig.catalog[6].items[2].isOpen | bool | `false` |  |
+| initConfig.catalog[6].items[2].items[0].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[0].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[0].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2001</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2001.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2001-01-01T11:00:00Z&time_end=2001-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[0].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[0].name | string | `"ERA5-Land daily mean TotalWind 2001"` |  |
+| initConfig.catalog[6].items[2].items[0].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[0].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[0].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2001.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[10].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[10].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[10].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2011</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2011.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2011-01-01T11:00:00Z&time_end=2011-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[10].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[10].name | string | `"ERA5-Land daily mean TotalWind 2011"` |  |
+| initConfig.catalog[6].items[2].items[10].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[10].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[10].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2011.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[11].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[11].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[11].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2012</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2012.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2012-01-01T11:00:00Z&time_end=2012-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[11].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[11].name | string | `"ERA5-Land daily mean TotalWind 2012"` |  |
+| initConfig.catalog[6].items[2].items[11].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[11].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[11].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2012.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[12].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[12].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[12].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2013</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2013.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2013-01-01T11:00:00Z&time_end=2013-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[12].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[12].name | string | `"ERA5-Land daily mean TotalWind 2013"` |  |
+| initConfig.catalog[6].items[2].items[12].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[12].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[12].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2013.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[13].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[13].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[13].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2014</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2014.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2014-01-01T11:00:00Z&time_end=2014-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[13].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[13].name | string | `"ERA5-Land daily mean TotalWind 2014"` |  |
+| initConfig.catalog[6].items[2].items[13].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[13].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[13].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2014.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[14].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[14].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[14].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2015</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2015.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2015-01-01T11:00:00Z&time_end=2015-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[14].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[14].name | string | `"ERA5-Land daily mean TotalWind 2015"` |  |
+| initConfig.catalog[6].items[2].items[14].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[14].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[14].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2015.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[15].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[15].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[15].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2016</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2016.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2016-01-01T11:00:00Z&time_end=2016-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[15].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[15].name | string | `"ERA5-Land daily mean TotalWind 2016"` |  |
+| initConfig.catalog[6].items[2].items[15].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[15].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[15].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2016.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[16].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[16].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[16].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2017</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2017.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2017-01-01T11:00:00Z&time_end=2017-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[16].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[16].name | string | `"ERA5-Land daily mean TotalWind 2017"` |  |
+| initConfig.catalog[6].items[2].items[16].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[16].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[16].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2017.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[17].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[17].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[17].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2018</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2018.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2018-01-01T11:00:00Z&time_end=2018-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[17].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[17].name | string | `"ERA5-Land daily mean TotalWind 2018"` |  |
+| initConfig.catalog[6].items[2].items[17].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[17].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[17].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2018.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[18].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[18].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[18].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2019</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2019.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2019-01-01T11:00:00Z&time_end=2019-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[18].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[18].name | string | `"ERA5-Land daily mean TotalWind 2019"` |  |
+| initConfig.catalog[6].items[2].items[18].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[18].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[18].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2019.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[1].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[1].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[1].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2002</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2002.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2002-01-01T11:00:00Z&time_end=2002-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[1].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[1].name | string | `"ERA5-Land daily mean TotalWind 2002"` |  |
+| initConfig.catalog[6].items[2].items[1].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[1].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[1].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2002.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[2].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[2].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[2].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2003</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2003.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2003-01-01T11:00:00Z&time_end=2003-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[2].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[2].name | string | `"ERA5-Land daily mean TotalWind 2003"` |  |
+| initConfig.catalog[6].items[2].items[2].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[2].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[2].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2003.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[3].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[3].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[3].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2004</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2004.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2004-01-01T11:00:00Z&time_end=2004-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[3].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[3].name | string | `"ERA5-Land daily mean TotalWind 2004"` |  |
+| initConfig.catalog[6].items[2].items[3].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[3].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[3].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2004.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[4].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[4].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[4].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2005</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2005.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2005-01-01T11:00:00Z&time_end=2005-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[4].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[4].name | string | `"ERA5-Land daily mean TotalWind 2005"` |  |
+| initConfig.catalog[6].items[2].items[4].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[4].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[4].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2005.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[5].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[5].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[5].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2006</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2006.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2006-01-01T11:00:00Z&time_end=2006-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[5].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[5].name | string | `"ERA5-Land daily mean TotalWind 2006"` |  |
+| initConfig.catalog[6].items[2].items[5].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[5].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[5].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2006.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[6].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[6].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[6].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2007</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2007.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2007-01-01T11:00:00Z&time_end=2007-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[6].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[6].name | string | `"ERA5-Land daily mean TotalWind 2007"` |  |
+| initConfig.catalog[6].items[2].items[6].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[6].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[6].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2007.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[7].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[7].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[7].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2008</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2008.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2008-01-01T11:00:00Z&time_end=2008-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[7].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[7].name | string | `"ERA5-Land daily mean TotalWind 2008"` |  |
+| initConfig.catalog[6].items[2].items[7].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[7].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[7].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2008.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[8].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[8].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[8].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2009</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2009.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2009-01-01T11:00:00Z&time_end=2009-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[8].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[8].name | string | `"ERA5-Land daily mean TotalWind 2009"` |  |
+| initConfig.catalog[6].items[2].items[8].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[8].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[8].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2009.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].items[9].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[6].items[2].items[9].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[2].items[9].featureInfoTemplate | string | `"<p>ERA5-Land daily mean TotalWind 2010</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2010.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2010-01-01T11:00:00Z&time_end=2010-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[2].items[9].layers | string | `"u10"` |  |
+| initConfig.catalog[6].items[2].items[9].name | string | `"ERA5-Land daily mean TotalWind 2010"` |  |
+| initConfig.catalog[6].items[2].items[9].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[6].items[2].items[9].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[2].items[9].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_mean_TotalWind/ERA5-Land_daily_mean_TotalWind_2010.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[2].name | string | `"ERA5-Land daily mean TotalWind"` |  |
+| initConfig.catalog[6].items[2].preserveOrder | bool | `true` |  |
+| initConfig.catalog[6].items[2].type | string | `"group"` |  |
+| initConfig.catalog[6].items[3].isOpen | bool | `false` |  |
+| initConfig.catalog[6].items[3].items[0].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[0].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[0].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1981</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1981.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1981-01-01T11:00:00Z&time_end=1981-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[0].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[0].name | string | `"ERA5-Land daily total precipitation 1981"` |  |
+| initConfig.catalog[6].items[3].items[0].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[0].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[0].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1981.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[10].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[10].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[10].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1991</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1991.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1991-01-01T11:00:00Z&time_end=1991-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[10].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[10].name | string | `"ERA5-Land daily total precipitation 1991"` |  |
+| initConfig.catalog[6].items[3].items[10].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[10].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[10].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1991.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[11].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[11].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[11].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1992</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1992.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1992-01-01T11:00:00Z&time_end=1992-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[11].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[11].name | string | `"ERA5-Land daily total precipitation 1992"` |  |
+| initConfig.catalog[6].items[3].items[11].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[11].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[11].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1992.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[12].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[12].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[12].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1993</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1993.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1993-01-01T11:00:00Z&time_end=1993-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[12].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[12].name | string | `"ERA5-Land daily total precipitation 1993"` |  |
+| initConfig.catalog[6].items[3].items[12].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[12].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[12].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1993.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[13].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[13].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[13].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1994</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1994.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1994-01-01T11:00:00Z&time_end=1994-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[13].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[13].name | string | `"ERA5-Land daily total precipitation 1994"` |  |
+| initConfig.catalog[6].items[3].items[13].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[13].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[13].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1994.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[14].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[14].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[14].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1995</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1995.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1995-01-01T11:00:00Z&time_end=1995-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[14].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[14].name | string | `"ERA5-Land daily total precipitation 1995"` |  |
+| initConfig.catalog[6].items[3].items[14].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[14].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[14].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1995.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[15].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[15].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[15].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1996</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1996.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1996-01-01T11:00:00Z&time_end=1996-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[15].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[15].name | string | `"ERA5-Land daily total precipitation 1996"` |  |
+| initConfig.catalog[6].items[3].items[15].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[15].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[15].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1996.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[16].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[16].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[16].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1997</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1997.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1997-01-01T11:00:00Z&time_end=1997-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[16].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[16].name | string | `"ERA5-Land daily total precipitation 1997"` |  |
+| initConfig.catalog[6].items[3].items[16].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[16].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[16].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1997.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[17].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[17].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[17].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1998</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1998.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1998-01-01T11:00:00Z&time_end=1998-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[17].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[17].name | string | `"ERA5-Land daily total precipitation 1998"` |  |
+| initConfig.catalog[6].items[3].items[17].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[17].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[17].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1998.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[18].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[18].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[18].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1999</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1999.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1999-01-01T11:00:00Z&time_end=1999-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[18].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[18].name | string | `"ERA5-Land daily total precipitation 1999"` |  |
+| initConfig.catalog[6].items[3].items[18].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[18].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[18].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1999.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[19].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[19].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[19].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2000</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2000.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2000-01-01T11:00:00Z&time_end=2000-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[19].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[19].name | string | `"ERA5-Land daily total precipitation 2000"` |  |
+| initConfig.catalog[6].items[3].items[19].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[19].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[19].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2000.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[1].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[1].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[1].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1982</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1982.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1982-01-01T11:00:00Z&time_end=1982-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[1].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[1].name | string | `"ERA5-Land daily total precipitation 1982"` |  |
+| initConfig.catalog[6].items[3].items[1].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[1].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[1].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1982.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[20].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[20].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[20].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2001</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2001.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2001-01-01T11:00:00Z&time_end=2001-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[20].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[20].name | string | `"ERA5-Land daily total precipitation 2001"` |  |
+| initConfig.catalog[6].items[3].items[20].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[20].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[20].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2001.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[21].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[21].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[21].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2002</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2002.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2002-01-01T11:00:00Z&time_end=2002-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[21].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[21].name | string | `"ERA5-Land daily total precipitation 2002"` |  |
+| initConfig.catalog[6].items[3].items[21].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[21].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[21].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2002.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[22].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[22].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[22].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2003</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2003.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2003-01-01T11:00:00Z&time_end=2003-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[22].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[22].name | string | `"ERA5-Land daily total precipitation 2003"` |  |
+| initConfig.catalog[6].items[3].items[22].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[22].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[22].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2003.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[23].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[23].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[23].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2004</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2004.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2004-01-01T11:00:00Z&time_end=2004-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[23].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[23].name | string | `"ERA5-Land daily total precipitation 2004"` |  |
+| initConfig.catalog[6].items[3].items[23].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[23].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[23].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2004.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[24].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[24].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[24].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2005</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2005.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2005-01-01T11:00:00Z&time_end=2005-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[24].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[24].name | string | `"ERA5-Land daily total precipitation 2005"` |  |
+| initConfig.catalog[6].items[3].items[24].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[24].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[24].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2005.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[25].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[25].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[25].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2006</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2006.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2006-01-01T11:00:00Z&time_end=2006-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[25].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[25].name | string | `"ERA5-Land daily total precipitation 2006"` |  |
+| initConfig.catalog[6].items[3].items[25].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[25].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[25].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2006.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[26].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[26].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[26].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2007</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2007.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2007-01-01T11:00:00Z&time_end=2007-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[26].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[26].name | string | `"ERA5-Land daily total precipitation 2007"` |  |
+| initConfig.catalog[6].items[3].items[26].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[26].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[26].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2007.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[27].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[27].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[27].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2008</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2008.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2008-01-01T11:00:00Z&time_end=2008-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[27].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[27].name | string | `"ERA5-Land daily total precipitation 2008"` |  |
+| initConfig.catalog[6].items[3].items[27].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[27].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[27].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2008.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[28].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[28].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[28].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2009</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2009.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2009-01-01T11:00:00Z&time_end=2009-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[28].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[28].name | string | `"ERA5-Land daily total precipitation 2009"` |  |
+| initConfig.catalog[6].items[3].items[28].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[28].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[28].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2009.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[29].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[29].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[29].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2010</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2010.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2010-01-01T11:00:00Z&time_end=2010-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[29].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[29].name | string | `"ERA5-Land daily total precipitation 2010"` |  |
+| initConfig.catalog[6].items[3].items[29].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[29].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[29].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2010.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[2].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[2].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[2].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1983</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1983.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1983-01-01T11:00:00Z&time_end=1983-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[2].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[2].name | string | `"ERA5-Land daily total precipitation 1983"` |  |
+| initConfig.catalog[6].items[3].items[2].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[2].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[2].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1983.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[30].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[30].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[30].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2011</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2011.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2011-01-01T11:00:00Z&time_end=2011-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[30].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[30].name | string | `"ERA5-Land daily total precipitation 2011"` |  |
+| initConfig.catalog[6].items[3].items[30].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[30].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[30].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2011.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[31].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[31].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[31].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2012</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2012.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2012-01-01T11:00:00Z&time_end=2012-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[31].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[31].name | string | `"ERA5-Land daily total precipitation 2012"` |  |
+| initConfig.catalog[6].items[3].items[31].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[31].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[31].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2012.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[32].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[32].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[32].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2013</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2013.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2013-01-01T11:00:00Z&time_end=2013-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[32].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[32].name | string | `"ERA5-Land daily total precipitation 2013"` |  |
+| initConfig.catalog[6].items[3].items[32].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[32].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[32].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2013.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[33].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[33].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[33].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2014</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2014.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2014-01-01T11:00:00Z&time_end=2014-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[33].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[33].name | string | `"ERA5-Land daily total precipitation 2014"` |  |
+| initConfig.catalog[6].items[3].items[33].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[33].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[33].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2014.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[34].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[34].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[34].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2015</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2015.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2015-01-01T11:00:00Z&time_end=2015-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[34].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[34].name | string | `"ERA5-Land daily total precipitation 2015"` |  |
+| initConfig.catalog[6].items[3].items[34].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[34].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[34].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2015.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[35].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[35].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[35].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2016</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2016.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2016-01-01T11:00:00Z&time_end=2016-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[35].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[35].name | string | `"ERA5-Land daily total precipitation 2016"` |  |
+| initConfig.catalog[6].items[3].items[35].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[35].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[35].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2016.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[36].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[36].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[36].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2017</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2017.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2017-01-01T11:00:00Z&time_end=2017-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[36].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[36].name | string | `"ERA5-Land daily total precipitation 2017"` |  |
+| initConfig.catalog[6].items[3].items[36].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[36].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[36].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2017.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[37].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[37].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[37].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2018</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2018.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2018-01-01T11:00:00Z&time_end=2018-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[37].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[37].name | string | `"ERA5-Land daily total precipitation 2018"` |  |
+| initConfig.catalog[6].items[3].items[37].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[37].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[37].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2018.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[38].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[38].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[38].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 2019</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2019.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2019-01-01T11:00:00Z&time_end=2019-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[38].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[38].name | string | `"ERA5-Land daily total precipitation 2019"` |  |
+| initConfig.catalog[6].items[3].items[38].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[38].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[38].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_2019.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[3].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[3].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[3].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1984</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1984.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1984-01-01T11:00:00Z&time_end=1984-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[3].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[3].name | string | `"ERA5-Land daily total precipitation 1984"` |  |
+| initConfig.catalog[6].items[3].items[3].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[3].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[3].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1984.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[4].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[4].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[4].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1985</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1985.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1985-01-01T11:00:00Z&time_end=1985-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[4].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[4].name | string | `"ERA5-Land daily total precipitation 1985"` |  |
+| initConfig.catalog[6].items[3].items[4].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[4].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[4].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1985.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[5].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[5].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[5].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1986</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1986.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1986-01-01T11:00:00Z&time_end=1986-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[5].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[5].name | string | `"ERA5-Land daily total precipitation 1986"` |  |
+| initConfig.catalog[6].items[3].items[5].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[5].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[5].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1986.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[6].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[6].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[6].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1987</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1987.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1987-01-01T11:00:00Z&time_end=1987-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[6].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[6].name | string | `"ERA5-Land daily total precipitation 1987"` |  |
+| initConfig.catalog[6].items[3].items[6].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[6].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[6].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1987.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[7].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[7].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[7].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1988</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1988.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1988-01-01T11:00:00Z&time_end=1988-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[7].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[7].name | string | `"ERA5-Land daily total precipitation 1988"` |  |
+| initConfig.catalog[6].items[3].items[7].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[7].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[7].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1988.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[8].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[8].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[8].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1989</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1989.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1989-01-01T11:00:00Z&time_end=1989-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[8].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[8].name | string | `"ERA5-Land daily total precipitation 1989"` |  |
+| initConfig.catalog[6].items[3].items[8].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[8].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[8].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1989.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].items[9].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[6].items[3].items[9].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[6].items[3].items[9].featureInfoTemplate | string | `"<p>ERA5-Land daily total precipitation 1990</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1990.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1990-01-01T11:00:00Z&time_end=1990-12-31T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[6].items[3].items[9].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[6].items[3].items[9].name | string | `"ERA5-Land daily total precipitation 1990"` |  |
+| initConfig.catalog[6].items[3].items[9].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[6].items[3].items[9].type | string | `"wms"` |  |
+| initConfig.catalog[6].items[3].items[9].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_daily_total_precipitation/ERA5-Land_daily_total_precipitation_1990.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[6].items[3].name | string | `"ERA5-Land daily total precipitation"` |  |
+| initConfig.catalog[6].items[3].preserveOrder | bool | `true` |  |
+| initConfig.catalog[6].items[3].type | string | `"group"` |  |
+| initConfig.catalog[6].name | string | `"ERA5-Land daily"` |  |
+| initConfig.catalog[6].preserveOrder | bool | `true` |  |
+| initConfig.catalog[6].type | string | `"group"` |  |
+| initConfig.catalog[7].isOpen | bool | `false` |  |
+| initConfig.catalog[7].items[0].isOpen | bool | `false` |  |
+| initConfig.catalog[7].items[0].items[0].colorScaleMaximum | int | `50` |  |
+| initConfig.catalog[7].items[0].items[0].colorScaleMinimum | int | `-50` |  |
+| initConfig.catalog[7].items[0].items[0].featureInfoTemplate | string | `"<p>ERA5-Land monthly mean 2mTemp 1981 2019</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_monthly/ERA5-Land_monthly_mean_2mTemp_1981_2019.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1981-01-16T12:00:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[7].items[0].items[0].layers | string | `"t2m"` |  |
+| initConfig.catalog[7].items[0].items[0].name | string | `"ERA5-Land monthly mean 2mTemp 1981 2019"` |  |
+| initConfig.catalog[7].items[0].items[0].styles | string | `"boxfill/red-yellow"` |  |
+| initConfig.catalog[7].items[0].items[0].type | string | `"wms"` |  |
+| initConfig.catalog[7].items[0].items[0].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_monthly/ERA5-Land_monthly_mean_2mTemp_1981_2019.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[7].items[0].name | string | `"ERA5-Land monthly mean 2mTemp"` |  |
+| initConfig.catalog[7].items[0].preserveOrder | bool | `true` |  |
+| initConfig.catalog[7].items[0].type | string | `"group"` |  |
+| initConfig.catalog[7].items[1].isOpen | bool | `false` |  |
+| initConfig.catalog[7].items[1].items[0].colorScaleMaximum | int | `100` |  |
+| initConfig.catalog[7].items[1].items[0].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[7].items[1].items[0].featureInfoTemplate | string | `"<p>ERA5-Land monthly mean RH 1981 2019</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_monthly/ERA5-Land_monthly_mean_RH_1981_2019.nc?var=t2m&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1981-01-16T12:00:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[7].items[1].items[0].layers | string | `"t2m"` |  |
+| initConfig.catalog[7].items[1].items[0].name | string | `"ERA5-Land monthly mean RH 1981 2019"` |  |
+| initConfig.catalog[7].items[1].items[0].styles | string | `"boxfill/green-purple"` |  |
+| initConfig.catalog[7].items[1].items[0].type | string | `"wms"` |  |
+| initConfig.catalog[7].items[1].items[0].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_monthly/ERA5-Land_monthly_mean_RH_1981_2019.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[7].items[1].name | string | `"ERA5-Land monthly mean RH"` |  |
+| initConfig.catalog[7].items[1].preserveOrder | bool | `true` |  |
+| initConfig.catalog[7].items[1].type | string | `"group"` |  |
+| initConfig.catalog[7].items[2].isOpen | bool | `false` |  |
+| initConfig.catalog[7].items[2].items[0].colorScaleMaximum | int | `13` |  |
+| initConfig.catalog[7].items[2].items[0].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[7].items[2].items[0].featureInfoTemplate | string | `"<p>ERA5-Land monthly mean TotalWind 2001 2019</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_monthly/ERA5-Land_monthly_mean_TotalWind_2001_2019.nc?var=u10&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2001-01-16T12:00:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[7].items[2].items[0].layers | string | `"u10"` |  |
+| initConfig.catalog[7].items[2].items[0].name | string | `"ERA5-Land monthly mean TotalWind 2001 2019"` |  |
+| initConfig.catalog[7].items[2].items[0].styles | string | `"boxfill/rainbow"` |  |
+| initConfig.catalog[7].items[2].items[0].type | string | `"wms"` |  |
+| initConfig.catalog[7].items[2].items[0].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_monthly/ERA5-Land_monthly_mean_TotalWind_2001_2019.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[7].items[2].name | string | `"ERA5-Land monthly mean TotalWind"` |  |
+| initConfig.catalog[7].items[2].preserveOrder | bool | `true` |  |
+| initConfig.catalog[7].items[2].type | string | `"group"` |  |
+| initConfig.catalog[7].items[3].isOpen | bool | `false` |  |
+| initConfig.catalog[7].items[3].items[0].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[7].items[3].items[0].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[7].items[3].items[0].featureInfoTemplate | string | `"<p>ERA5-Land monthly total precipitation 1981 2019</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_monthly/ERA5-Land_monthly_total_precipitation_1981_2019.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1981-01-16T12:00:00Z&time_end=2019-12-16T11:30:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[7].items[3].items[0].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[7].items[3].items[0].name | string | `"ERA5-Land monthly total precipitation 1981 2019"` |  |
+| initConfig.catalog[7].items[3].items[0].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[7].items[3].items[0].type | string | `"wms"` |  |
+| initConfig.catalog[7].items[3].items[0].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_monthly/ERA5-Land_monthly_total_precipitation_1981_2019.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[7].items[3].name | string | `"ERA5-Land monthly total precipitation"` |  |
+| initConfig.catalog[7].items[3].preserveOrder | bool | `true` |  |
+| initConfig.catalog[7].items[3].type | string | `"group"` |  |
+| initConfig.catalog[7].name | string | `"ERA5-Land monthly"` |  |
+| initConfig.catalog[7].preserveOrder | bool | `true` |  |
+| initConfig.catalog[7].type | string | `"group"` |  |
+| initConfig.catalog[8].isOpen | bool | `false` |  |
+| initConfig.catalog[8].items[0].isOpen | bool | `false` |  |
+| initConfig.catalog[8].items[0].items[0].colorScaleMaximum | int | `1000` |  |
+| initConfig.catalog[8].items[0].items[0].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[8].items[0].items[0].featureInfoTemplate | string | `"<p>ERA5-Land 30year TotalPrecip</p><chart src=\"http://thredds:8080/thredds/ncss/ERA5-Land_30year/ERA5-Land_30year_TotalPrecip.nc?var=precipitation_rate&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1995-07-03T12:00:00Z&time_end=1996-07-01T11:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[8].items[0].items[0].layers | string | `"precipitation_rate"` |  |
+| initConfig.catalog[8].items[0].items[0].name | string | `"ERA5-Land 30year TotalPrecip"` |  |
+| initConfig.catalog[8].items[0].items[0].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[8].items[0].items[0].type | string | `"wms"` |  |
+| initConfig.catalog[8].items[0].items[0].url | string | `"http://thredds:8080/thredds/wms/ERA5-Land_30year/ERA5-Land_30year_TotalPrecip.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[8].items[0].name | string | `"ERA5-Land 30year TotalPrecip"` |  |
+| initConfig.catalog[8].items[0].preserveOrder | bool | `true` |  |
+| initConfig.catalog[8].items[0].type | string | `"group"` |  |
+| initConfig.catalog[8].name | string | `"ERA5-Land 30year"` |  |
+| initConfig.catalog[8].preserveOrder | bool | `true` |  |
+| initConfig.catalog[8].type | string | `"group"` |  |
 | initConfig.homeCamera.east | int | `177` |  |
 | initConfig.homeCamera.north | int | `-5` |  |
 | initConfig.homeCamera.south | int | `-24` |  |
