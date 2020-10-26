@@ -2,7 +2,7 @@ thredds
 =======
 A Helm chart for Kubernetes
 
-Current chart version is `0.12.1`
+Current chart version is `0.13.0`
 
 Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 
@@ -47,6 +47,9 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | pvc.era5LandData.name | string | `"era5-land-data"` |  |
 | pvc.era5LandData.namespace | string | `"dev-csvs"` |  |
 | pvc.era5LandData.storageClassName | string | `"fast"` |  |
+| pvc.ncepData.name | string | `"ncep-data"` |  |
+| pvc.ncepData.namespace | string | `"dev-csvs"` |  |
+| pvc.ncepData.storageClassName | string | `"fast"` |  |
 | pvc.netcdfDaily1.name | string | `"era5-data-daily-part-1"` |  |
 | pvc.netcdfDaily1.namespace | string | `"dev-csvs"` |  |
 | pvc.netcdfDaily1.storageClassName | string | `"fast"` |  |
@@ -77,7 +80,7 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | serviceAccount.create | bool | `true` |  |
 | serviceAccount.name | string | `""` |  |
 | sidecar.awsConcurrentRequests | int | `1` |  |
-| sidecar.image.pullPolicy | string | `"IfNotPresent"` |  |
+| sidecar.image.pullPolicy | string | `"Always"` |  |
 | sidecar.image.repository | string | `"satapps/csvs-thredds-sidecar"` |  |
-| sidecar.image.tag | float | `0.9` |  |
+| sidecar.image.tag | string | `"0.10"` |  |
 | tolerations | list | `[]` |  |
