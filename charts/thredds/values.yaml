@@ -6,7 +6,7 @@ replicaCount: 1
 
 initImage:
   repository: satapps/init-thredds
-  tag: 228dccc
+  tag: b29c425
 
 image:
   repository: unidata/thredds-docker
@@ -21,7 +21,7 @@ fullnameOverride: ""
 sidecar:
   image:
     repository: satapps/csvs-thredds-sidecar
-    tag: 0.8
+    tag: 0.9
     pullPolicy: IfNotPresent
   awsConcurrentRequests: 1
 
@@ -48,6 +48,10 @@ pvc:
     storageClassName: fast
   era5LandData:
     name: era5-land-data
+    namespace: dev-csvs
+    storageClassName: fast
+  trmmData:
+    name: trmm-data
     namespace: dev-csvs
     storageClassName: fast
 
