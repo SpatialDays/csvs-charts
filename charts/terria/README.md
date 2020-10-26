@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.29.1`
+Current chart version is `0.30.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -4041,6 +4041,138 @@ Source code can be found [here](https://terria.io/)
 | initConfig.catalog[8].name | string | `"ERA5-Land 30year"` |  |
 | initConfig.catalog[8].preserveOrder | bool | `true` |  |
 | initConfig.catalog[8].type | string | `"group"` |  |
+| initConfig.catalog[9].isOpen | bool | `false` |  |
+| initConfig.catalog[9].items[0].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[0].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[0].featureInfoTemplate | string | `"<p>TRMM daily 3B42 1998</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.1998.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1998-01-01T00:00:00Z&time_end=1998-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[0].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[0].name | string | `"TRMM daily 1998"` |  |
+| initConfig.catalog[9].items[0].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[0].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[0].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.1998.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[10].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[10].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[10].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2008</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2008.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2008-01-01T00:00:00Z&time_end=2008-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[10].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[10].name | string | `"TRMM daily 2008"` |  |
+| initConfig.catalog[9].items[10].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[10].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[10].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2008.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[11].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[11].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[11].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2009</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2009.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2009-01-01T00:00:00Z&time_end=2009-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[11].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[11].name | string | `"TRMM daily 2009"` |  |
+| initConfig.catalog[9].items[11].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[11].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[11].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2009.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[12].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[12].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[12].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2010</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2010.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2010-01-01T00:00:00Z&time_end=2010-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[12].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[12].name | string | `"TRMM daily 2010"` |  |
+| initConfig.catalog[9].items[12].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[12].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[12].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2010.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[13].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[13].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[13].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2011</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2011.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2011-01-01T00:00:00Z&time_end=2011-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[13].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[13].name | string | `"TRMM daily 2011"` |  |
+| initConfig.catalog[9].items[13].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[13].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[13].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2011.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[14].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[14].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[14].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2012</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2012.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2012-01-01T00:00:00Z&time_end=2012-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[14].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[14].name | string | `"TRMM daily 2012"` |  |
+| initConfig.catalog[9].items[14].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[14].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[14].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2012.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[15].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[15].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[15].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2013</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2013.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2013-01-01T00:00:00Z&time_end=2013-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[15].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[15].name | string | `"TRMM daily 2013"` |  |
+| initConfig.catalog[9].items[15].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[15].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[15].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2013.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[1].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[1].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[1].featureInfoTemplate | string | `"<p>TRMM daily 3B42 1999</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.1999.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=1999-01-01T00:00:00Z&time_end=1999-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[1].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[1].name | string | `"TRMM daily 1999"` |  |
+| initConfig.catalog[9].items[1].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[1].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[1].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.1999.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[2].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[2].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[2].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2000</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2000.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2000-01-01T00:00:00Z&time_end=2000-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[2].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[2].name | string | `"TRMM daily 2000"` |  |
+| initConfig.catalog[9].items[2].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[2].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[2].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2000.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[3].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[3].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[3].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2001</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2001.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2001-01-01T00:00:00Z&time_end=2001-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[3].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[3].name | string | `"TRMM daily 2001"` |  |
+| initConfig.catalog[9].items[3].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[3].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[3].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2001.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[4].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[4].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[4].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2002</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2002.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2002-01-01T00:00:00Z&time_end=2002-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[4].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[4].name | string | `"TRMM daily 2002"` |  |
+| initConfig.catalog[9].items[4].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[4].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[4].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2002.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[5].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[5].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[5].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2003</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2003.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2003-01-01T00:00:00Z&time_end=2003-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[5].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[5].name | string | `"TRMM daily 2003"` |  |
+| initConfig.catalog[9].items[5].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[5].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[5].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2003.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[6].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[6].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[6].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2004</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2004.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2004-01-01T00:00:00Z&time_end=2004-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[6].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[6].name | string | `"TRMM daily 2004"` |  |
+| initConfig.catalog[9].items[6].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[6].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[6].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2004.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[7].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[7].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[7].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2005</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2005.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2005-01-01T00:00:00Z&time_end=2005-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[7].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[7].name | string | `"TRMM daily 2005"` |  |
+| initConfig.catalog[9].items[7].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[7].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[7].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2005.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[8].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[8].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[8].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2006</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2006.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2006-01-01T00:00:00Z&time_end=2006-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[8].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[8].name | string | `"TRMM daily 2006"` |  |
+| initConfig.catalog[9].items[8].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[8].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[8].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2006.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].items[9].colorScaleMaximum | int | `150` |  |
+| initConfig.catalog[9].items[9].colorScaleMinimum | int | `0` |  |
+| initConfig.catalog[9].items[9].featureInfoTemplate | string | `"<p>TRMM daily 3B42 2007</p><chart src=\"http://thredds:8080/thredds/ncss/TRMM/TRMM_3B42.2007.daily_V7.nc?var=precip&latitude={{terria.coords.latitude}}&longitude={{terria.coords.longitude}}&time_start=2007-01-01T00:00:00Z&time_end=2007-12-31T00:00:00Z&accept=csv\" y-column=\"3\" hide-buttons=\"True\"></chart>"` |  |
+| initConfig.catalog[9].items[9].layers | string | `"precip"` |  |
+| initConfig.catalog[9].items[9].name | string | `"TRMM daily 2007"` |  |
+| initConfig.catalog[9].items[9].styles | string | `"boxfill/blu-yellow"` |  |
+| initConfig.catalog[9].items[9].type | string | `"wms"` |  |
+| initConfig.catalog[9].items[9].url | string | `"http://thredds:8080/thredds/wms/TRMM/TRMM_3B42.2007.daily_V7.nc?service=WMS&version=1.3.0&request=GetCapabilities"` |  |
+| initConfig.catalog[9].name | string | `"TRMM"` |  |
+| initConfig.catalog[9].preserveOrder | bool | `true` |  |
+| initConfig.catalog[9].type | string | `"group"` |  |
 | initConfig.homeCamera.east | int | `177` |  |
 | initConfig.homeCamera.north | int | `-5` |  |
 | initConfig.homeCamera.south | int | `-24` |  |
