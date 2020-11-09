@@ -2,7 +2,7 @@ thredds
 =======
 A Helm chart for Kubernetes
 
-Current chart version is `0.14.2`
+Current chart version is `0.15.0`
 
 Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 
@@ -29,6 +29,7 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | ingress.hosts[0].host | string | `"chart-example.local"` |  |
 | ingress.hosts[0].paths | list | `[]` |  |
 | ingress.tls | list | `[]` |  |
+| initImage.pullPolicy | string | `"IfNotPresent"` |  |
 | initImage.repository | string | `"satapps/init-thredds"` |  |
 | initImage.tag | string | `"65cfea6"` |  |
 | livenessProbe.enabled | bool | `false` |  |
