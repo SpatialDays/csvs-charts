@@ -2,7 +2,7 @@ terria
 ======
 A Helm chart for terria map
 
-Current chart version is `0.32.1`
+Current chart version is `0.33.0`
 
 Source code can be found [here](https://terria.io/)
 
@@ -19,6 +19,7 @@ Source code can be found [here](https://terria.io/)
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
 | clientConfig.initializationUrls[0] | string | `"terria"` |  |
+| clientConfig.initializationUrls[1] | string | `"metoffice"` |  |
 | clientConfig.parameters.appName | string | `"Terria Map"` |  |
 | clientConfig.parameters.brandBarElements[0] | string | `""` |  |
 | clientConfig.parameters.brandBarElements[1] | string | `"<a target=\"_blank\" href=\"http://terria.io\"><img src=\"images/SI_high.png\" height=\"52\" title=\"Version: {{version}}\" /></a>"` |  |
