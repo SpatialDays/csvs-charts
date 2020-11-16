@@ -6,7 +6,7 @@ replicaCount: 1
 
 initImage:
   repository: satapps/init-thredds
-  tag: '65cfea6'
+  tag: 'b9a9d8b'
   pullPolicy: IfNotPresent
 
 image:
@@ -22,8 +22,8 @@ fullnameOverride: ""
 sidecar:
   image:
     repository: satapps/csvs-thredds-sidecar
-    tag: '0.10'
-    pullPolicy: Always
+    tag: '0.11'
+    pullPolicy: IfNotPresent
   awsConcurrentRequests: 1
 
 pvc:
@@ -57,6 +57,10 @@ pvc:
     storageClassName: fast
   ncepData:
     name: ncep-data
+    namespace: dev-csvs
+    storageClassName: fast
+  gpcpData:
+    name: gpcp-data
     namespace: dev-csvs
     storageClassName: fast
 
