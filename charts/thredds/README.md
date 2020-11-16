@@ -2,7 +2,7 @@ thredds
 =======
 A Helm chart for Kubernetes
 
-Current chart version is `0.15.1`
+Current chart version is `0.16.0`
 
 Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 
@@ -31,7 +31,7 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | ingress.tls | list | `[]` |  |
 | initImage.pullPolicy | string | `"IfNotPresent"` |  |
 | initImage.repository | string | `"satapps/init-thredds"` |  |
-| initImage.tag | string | `"65cfea6"` |  |
+| initImage.tag | string | `"b9a9d8b"` |  |
 | livenessProbe.enabled | bool | `false` |  |
 | livenessProbe.failureThreshold | int | `6` |  |
 | livenessProbe.initialDelaySeconds | int | `15` |  |
@@ -48,6 +48,9 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | pvc.era5LandData.name | string | `"era5-land-data"` |  |
 | pvc.era5LandData.namespace | string | `"dev-csvs"` |  |
 | pvc.era5LandData.storageClassName | string | `"fast"` |  |
+| pvc.gpcpData.name | string | `"gpcp-data"` |  |
+| pvc.gpcpData.namespace | string | `"dev-csvs"` |  |
+| pvc.gpcpData.storageClassName | string | `"fast"` |  |
 | pvc.ncepData.name | string | `"ncep-data"` |  |
 | pvc.ncepData.namespace | string | `"dev-csvs"` |  |
 | pvc.ncepData.storageClassName | string | `"fast"` |  |
@@ -81,7 +84,7 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | serviceAccount.create | bool | `true` |  |
 | serviceAccount.name | string | `""` |  |
 | sidecar.awsConcurrentRequests | int | `1` |  |
-| sidecar.image.pullPolicy | string | `"Always"` |  |
+| sidecar.image.pullPolicy | string | `"IfNotPresent"` |  |
 | sidecar.image.repository | string | `"satapps/csvs-thredds-sidecar"` |  |
-| sidecar.image.tag | string | `"0.10"` |  |
+| sidecar.image.tag | string | `"0.11"` |  |
 | tolerations | list | `[]` |  |
