@@ -2,7 +2,7 @@ thredds
 =======
 A Helm chart for Kubernetes
 
-Current chart version is `0.16.0`
+Current chart version is `0.17.0`
 
 Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 
@@ -31,7 +31,7 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | ingress.tls | list | `[]` |  |
 | initImage.pullPolicy | string | `"IfNotPresent"` |  |
 | initImage.repository | string | `"satapps/init-thredds"` |  |
-| initImage.tag | string | `"b9a9d8b"` |  |
+| initImage.tag | string | `"4c445d4"` |  |
 | livenessProbe.enabled | bool | `false` |  |
 | livenessProbe.failureThreshold | int | `6` |  |
 | livenessProbe.initialDelaySeconds | int | `15` |  |
@@ -45,6 +45,9 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | pvc.configuration.name | string | `"thredds"` |  |
 | pvc.configuration.namespace | string | `"dev-csvs"` |  |
 | pvc.configuration.storageClassName | string | `"fast"` |  |
+| pvc.cruData.name | string | `"cru-data"` |  |
+| pvc.cruData.namespace | string | `"dev-csvs"` |  |
+| pvc.cruData.storageClassName | string | `"fast"` |  |
 | pvc.era5LandData.name | string | `"era5-land-data"` |  |
 | pvc.era5LandData.namespace | string | `"dev-csvs"` |  |
 | pvc.era5LandData.storageClassName | string | `"fast"` |  |
@@ -86,5 +89,5 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | sidecar.awsConcurrentRequests | int | `1` |  |
 | sidecar.image.pullPolicy | string | `"IfNotPresent"` |  |
 | sidecar.image.repository | string | `"satapps/csvs-thredds-sidecar"` |  |
-| sidecar.image.tag | string | `"0.11"` |  |
+| sidecar.image.tag | string | `"0.12"` |  |
 | tolerations | list | `[]` |  |
