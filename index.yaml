@@ -3,6 +3,20 @@ entries:
   geoserver:
   - apiVersion: v1
     appVersion: "1.4"
+    created: "2020-11-17T15:26:19.268736754Z"
+    description: A Helm chart for deploying GeoServer
+    digest: ccaab231222142e28f2d7dfc49b42a786c6c31c16ab5c4b4c75ea7983e497597
+    home: http://geoserver.org/
+    maintainers:
+    - email: davide.delerma@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: geoserver
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/geoserver-0.19.17/geoserver-0.19.17.tgz
+    version: 0.19.17
+  - apiVersion: v1
+    appVersion: "1.4"
     created: "2020-11-16T17:02:16.870313806Z"
     description: A Helm chart for deploying GeoServer
     digest: 88176380be328198e12357e1afdc2d2b8ec87b15602fa0522c10ac3a5aa618b3
@@ -870,6 +884,20 @@ entries:
     - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/geoserver-0.1.0/geoserver-0.1.0.tgz
     version: 0.1.0
   terria:
+  - apiVersion: v1
+    appVersion: master-sha-98221d5
+    created: "2020-11-17T15:26:19.375554031Z"
+    description: A Helm chart for terria map
+    digest: b66de130d5b87f21c9667173111ebeee2798e804c80ab73219620788baf3a95e
+    home: https://terria.io/
+    maintainers:
+    - email: davide.delerma@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: terria
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/terria-0.33.3/terria-0.33.3.tgz
+    version: 0.33.3
   - apiVersion: v1
     appVersion: master-sha-98221d5
     created: "2020-11-16T17:02:17.147699051Z"
@@ -1781,6 +1809,20 @@ entries:
     - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/terria-0.2.0/terria-0.2.0.tgz
     version: 0.2.0
   thredds:
+  - apiVersion: v1
+    appVersion: 4.6.15
+    created: "2020-11-17T15:26:19.488453378Z"
+    description: A Helm chart for Kubernetes
+    digest: 0e79b252965b39aacf74abaad8d7f8ae859860d3b2e77abdc05cc73362611f1a
+    home: https://www.unidata.ucar.edu/software/tds/
+    maintainers:
+    - email: davide.delerma@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: thredds
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/thredds-0.18.0/thredds-0.18.0.tgz
+    version: 0.18.0
   - apiVersion: v1
     appVersion: 4.6.15
     created: "2020-11-16T17:02:17.403005644Z"
