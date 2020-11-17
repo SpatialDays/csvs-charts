@@ -2,7 +2,7 @@ thredds
 =======
 A Helm chart for Kubernetes
 
-Current chart version is `0.17.0`
+Current chart version is `0.18.0`
 
 Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 
@@ -31,7 +31,7 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | ingress.tls | list | `[]` |  |
 | initImage.pullPolicy | string | `"IfNotPresent"` |  |
 | initImage.repository | string | `"satapps/init-thredds"` |  |
-| initImage.tag | string | `"4c445d4"` |  |
+| initImage.tag | string | `"96af9cc"` |  |
 | livenessProbe.enabled | bool | `false` |  |
 | livenessProbe.failureThreshold | int | `6` |  |
 | livenessProbe.initialDelaySeconds | int | `15` |  |
@@ -42,6 +42,9 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |
 | podSecurityContext | object | `{}` |  |
+| pvc.cmapData.name | string | `"cmap-data"` |  |
+| pvc.cmapData.namespace | string | `"dev-csvs"` |  |
+| pvc.cmapData.storageClassName | string | `"fast"` |  |
 | pvc.configuration.name | string | `"thredds"` |  |
 | pvc.configuration.namespace | string | `"dev-csvs"` |  |
 | pvc.configuration.storageClassName | string | `"fast"` |  |
@@ -89,5 +92,5 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | sidecar.awsConcurrentRequests | int | `1` |  |
 | sidecar.image.pullPolicy | string | `"IfNotPresent"` |  |
 | sidecar.image.repository | string | `"satapps/csvs-thredds-sidecar"` |  |
-| sidecar.image.tag | string | `"0.12"` |  |
+| sidecar.image.tag | string | `"0.13"` |  |
 | tolerations | list | `[]` |  |
