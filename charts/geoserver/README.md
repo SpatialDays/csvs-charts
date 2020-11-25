@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for deploying GeoServer
 
-Current chart version is `0.19.17`
+Current chart version is `0.19.18`
 
 Source code can be found [here](http://geoserver.org/)
 
