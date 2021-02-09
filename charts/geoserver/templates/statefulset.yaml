@@ -26,6 +26,10 @@ spec:
           - mountPath: "/rasters_data"
             name: {{ .Values.pvc.rasters.name }}
         {{- end }}
+        {{- if .Values.pvc.vectors.enabled }}
+          - mountPath: "/vector_data"
+            name: {{ .Values.pvc.vectors.name }}
+        {{- end }}
         env:
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
@@ -47,6 +51,10 @@ spec:
           - mountPath: "/rasters_data"
             name: {{ .Values.pvc.rasters.name }}
           {{- end }}
+        {{- if .Values.pvc.vectors.enabled }}
+          - mountPath: "/vector_data"
+            name: {{ .Values.pvc.vectors.name }}
+        {{- end }}
         ports:
         - name: http
           containerPort: {{ .Values.service.port }}
@@ -94,4 +102,14 @@ spec:
           requests:
             storage: 10Gi
     {{- end }}
-
+    {{- if .Values.pvc.vectors.enabled }}
+    - metadata:
+        name: {{ .Values.pvc.vectors.name }}
+      spec:
+        storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 5Gi
+    {{- end }}

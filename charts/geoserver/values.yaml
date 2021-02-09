@@ -102,6 +102,9 @@ pvc:
   rasters:
     enabled: false
     name: geoserver-rasters
+  vectors:
+    enabled: false
+    name: geoserver-vectors
 
 local:
   enabled: false
