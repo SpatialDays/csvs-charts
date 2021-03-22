@@ -3,6 +3,20 @@ entries:
   ensoserver:
   - apiVersion: v2
     appVersion: latest
+    created: "2021-03-22T16:10:38.081305983Z"
+    description: A Helm chart for Kubernetes
+    digest: c8dd1987c684583cb419e271294f86281ab6512bc3cc5c30b020f866343f166b
+    home: https://github.com/SatelliteApplicationsCatapult/csvs-enso-server
+    maintainers:
+    - email: juan.macias@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: ensoserver
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/ensoserver-0.1.1/ensoserver-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: latest
     created: "2020-12-03T11:16:38.893448938Z"
     description: A Helm chart for Kubernetes
     digest: cc88ee414406d6884c3024f825ca4a316431440b9a28fb9526d2a4056834bb2f
@@ -16,6 +30,20 @@ entries:
     - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/ensoserver-0.1.0/ensoserver-0.1.0.tgz
     version: 0.1.0
   geoserver:
+  - apiVersion: v2
+    appVersion: "1.4"
+    created: "2021-03-22T16:10:38.242798369Z"
+    description: A Helm chart for deploying GeoServer
+    digest: df32d333b59306a83ae1a52d632ed28e474a429c87da2d7af43f47ea43bf87b6
+    home: http://geoserver.org/
+    maintainers:
+    - email: davide.delerma@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: geoserver
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/geoserver-0.21.2/geoserver-0.21.2.tgz
+    version: 0.21.2
   - apiVersion: v2
     appVersion: "1.4"
     created: "2020-12-03T11:16:38.998915081Z"
@@ -955,6 +983,20 @@ entries:
     - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/geoserver-0.1.0/geoserver-0.1.0.tgz
     version: 0.1.0
   terria:
+  - apiVersion: v2
+    appVersion: master-sha-c782641
+    created: "2021-03-22T16:10:38.334242674Z"
+    description: A Helm chart for terria map
+    digest: 5e0ec099ebb3d50b267d2fd1ef75f9768d6f6f88bac9eff7f96fce2bbc29c1ae
+    home: https://terria.io/
+    maintainers:
+    - email: davide.delerma@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: terria
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/terria-0.35.2/terria-0.35.2.tgz
+    version: 0.35.2
   - apiVersion: v2
     appVersion: master-sha-c782641
     created: "2020-12-03T11:16:39.110596834Z"
@@ -1936,6 +1978,20 @@ entries:
     - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/terria-0.2.0/terria-0.2.0.tgz
     version: 0.2.0
   thredds:
+  - apiVersion: v2
+    appVersion: 4.6.15
+    created: "2021-03-22T16:10:38.451362509Z"
+    description: A Helm chart for Kubernetes
+    digest: 503544b05c5c5baa0d842728300a9d198b8c6bcc9b02af1691326dd747d4f993
+    home: https://www.unidata.ucar.edu/software/tds/
+    maintainers:
+    - email: davide.delerma@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: thredds
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/csvs-charts/releases/download/thredds-0.21.0/thredds-0.21.0.tgz
+    version: 0.21.0
   - apiVersion: v2
     appVersion: 4.6.15
     created: "2020-12-03T11:16:39.236094599Z"
