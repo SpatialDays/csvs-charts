@@ -2,7 +2,7 @@ thredds
 =======
 A Helm chart for Kubernetes
 
-Current chart version is `0.21.3`
+Current chart version is `0.22.0`
 
 Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 
@@ -92,5 +92,5 @@ Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 | sidecar.awsConcurrentRequests | int | `1` |  |
 | sidecar.image.pullPolicy | string | `"IfNotPresent"` |  |
 | sidecar.image.repository | string | `"satapps/csvs-thredds-sidecar"` |  |
-| sidecar.image.tag | string | `"0.14"` |  |
+| sidecar.image.tag | string | `"0.15"` |  |
 | tolerations | list | `[]` |  |
