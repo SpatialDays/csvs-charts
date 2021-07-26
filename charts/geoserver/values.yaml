@@ -96,7 +96,7 @@ awsSecretAccessKey: test
 
 pvc:
   remote:
-    storageClassName: fast
+    storageClassName: portworx-csi-sc-retain
     namespace: dev-csvs
     name: geoserver
   rasters:
