@@ -105,6 +105,9 @@ pvc:
   vectors:
     enabled: false
     name: geoserver-vectors
+  webinf:
+    enabled: false
+    name: geoserver-webinf
 
 local:
   enabled: false

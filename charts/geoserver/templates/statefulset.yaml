@@ -30,6 +30,10 @@ spec:
           - mountPath: "/vector_data"
             name: {{ .Values.pvc.vectors.name }}
         {{- end }}
+        {{- if .Values.pvc.webinf.enabled }}
+          - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
+            name: {{ .Values.pvc.webinf.name }}
+        {{- end }}
         env:
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
@@ -54,6 +58,10 @@ spec:
         {{- if .Values.pvc.vectors.enabled }}
           - mountPath: "/vector_data"
             name: {{ .Values.pvc.vectors.name }}
+        {{- end }}
+        {{- if .Values.pvc.webinf.enabled }}
+          - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
+            name: {{ .Values.pvc.webinf.name }}
         {{- end }}
         ports:
         - name: http
@@ -90,7 +98,7 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 5Gi
+            storage: 10Gi
     {{- if .Values.pvc.rasters.enabled }}
     - metadata:
         name: {{ .Values.pvc.rasters.name }}
@@ -105,6 +113,17 @@ spec:
     {{- if .Values.pvc.vectors.enabled }}
     - metadata:
         name: {{ .Values.pvc.vectors.name }}
+      spec:
+        storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 10Gi
+    {{- end }}
+    {{- if .Values.pvc.webinf.enabled }}
+    - metadata:
+        name: {{ .Values.pvc.webinf.name }}
       spec:
         storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
         accessModes:
