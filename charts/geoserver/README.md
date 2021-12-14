@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for deploying GeoServer
 
-Current chart version is `0.22.3`
+Current chart version is `0.23.0`
 
 Source code can be found [here](http://geoserver.org/)
 
@@ -56,6 +56,8 @@ Source code can be found [here](http://geoserver.org/)
 | pvc.remote.storageClassName | string | `"portworx-csi-sc-retain"` |  |
 | pvc.vectors.enabled | bool | `false` |  |
 | pvc.vectors.name | string | `"geoserver-vectors"` |  |
+| pvc.webinf.enabled | bool | `false` |  |
+| pvc.webinf.name | string | `"geoserver-webinf"` |  |
 | rbac.create | bool | `true` |  |
 | readinessProbe.enabled | bool | `true` |  |
 | replicaCount | int | `1` |  |
