@@ -2,7 +2,7 @@ thredds
 =======
 A Helm chart for Kubernetes
 
-Current chart version is `0.22.2`
+Current chart version is `0.22.3`
 
 Source code can be found [here](https://www.unidata.ucar.edu/software/tds/)
 
