@@ -5,9 +5,9 @@ metadata:
   labels:
     {{- include "terria.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.service.type }}
+  type: {{ .Values.serverConfig.type }}
   ports:
-    - port: {{ .Values.service.port }}
+    - port: {{ .Values.serverConfig.port }}
       targetPort: http
       protocol: TCP
       name: http
