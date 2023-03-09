@@ -1,0 +1,211 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  thredds-config-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
+--- 
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  era5-data-monthly-yearly-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
+--- 
+
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:   era5-data-daily-part-1-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
+--- 
+
+
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  era5-data-daily-part-2-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
+--- 
+
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  era5-data-daily-part-3-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
+--- 
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  era5-land-data-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
+--- 
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  trmm-data-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
+--- 
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  ncep-data-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
+--- 
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  gpcp-data-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
+--- 
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  cru-data-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
+--- 
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  cmap-data-pvc-storage-class
+provisioner: file.csi.azure.com
+allowVolumeExpansion: true
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+parameters:
+  skuName: Standard_LRS
+
