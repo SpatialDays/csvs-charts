@@ -16,10 +16,9 @@ jobs:
         run: git fetch --prune --unshallow
 
       - name: Run chart-testing (lint)
-        id: lint
-        # Support for Helm 2 is on branch dev-v2.
-        uses: helm/chart-testing-action@dev-v2
+        uses: helm/chart-testing-action@v1.0.0-rc.2
         with:
+          config: .github/ct-lint.yaml
           command: lint
 
   validation:
@@ -27,12 +26,8 @@ jobs:
     needs:
       - linting
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Kubernetes toolset
-        uses: stefanprodan/kube-tools@v1.5.0
+      - uses: actions/checkout@v2
+      - name: Kubernetes Validator
+        uses: desaintmartin/helm-kubeval-action@master
         with:
-          kubectl: 1.15.10
-          helm: 2.16.0
-          command: for chart in charts/*/; do helm template "$chart" | kubeval -v 1.15.0; done
+          path: ./charts

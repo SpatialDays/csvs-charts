@@ -39,20 +39,20 @@ service:
   port: 8080
 
 ingress:
-  enabled: true
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
-    # kubernetes.io/tls-acme: "true"
-    # nginx.ingress.kubernetes.io/rewrite-target: /
-    # nginx.ingress.kubernetes.io/add-base-url: "true"
-  hosts:
-    - host: dev-csvs.sa-catapult.co.uk
-      paths:
-        - path: /geoserver
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+  enabled: false
+#  annotations:
+#    kubernetes.io/ingress.class: "nginx"
+#    # kubernetes.io/tls-acme: "true"
+#    # nginx.ingress.kubernetes.io/rewrite-target: /
+#    # nginx.ingress.kubernetes.io/add-base-url: "true"
+#  hosts:
+#    - host: dev-csvs.sa-catapult.co.uk
+#      paths:
+#        - path: /geoserver
+#  tls: []
+#  #  - secretName: chart-example-tls
+#  #    hosts:
+#  #      - chart-example.local
 
 resources:
   {}
@@ -76,7 +76,7 @@ affinity: {}
 sidecar:
   image:
     repository: satapps/geoserver-commands
-    tag: 0.5
+    tag: 0.8
     pullPolicy: IfNotPresent
 
 backup:
@@ -96,15 +96,12 @@ awsSecretAccessKey: test
 
 pvc:
   remote:
-    storageClassName: fast
+    storageClassName: portworx-csi-sc-retain
     namespace: dev-csvs
     name: geoserver
   rasters:
     enabled: false
     name: geoserver-rasters
-  netcdf:
-    enabled: false
-    name: geoserver-netcdf
 
 local:
   enabled: false
@@ -121,6 +118,16 @@ livenessProbe:
 
 readinessProbe:
   enabled: true
+
+## Role Based Access for a ServiceAccount
+## ref: https://kubernetes.io/docs/admin/authorization/rbac/
+##
+rbac:
+  ## Specifies whether RBAC rules should be created
+  ## binding GeoServer ServiceAccount to a role
+  ## that allows GeoServer pods querying the K8s API
+  ##
+  create: true
 
 postgres:
   postgresqlUsername: geoserver

@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: satapps/terriamap
+  repository: commonsensingacr.azurecr.io/terriamap:20230303.2
   pullPolicy: IfNotPresent
   suffix: solomon
 
@@ -48,7 +48,7 @@ ingress:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
     # nginx.ingress.kubernetes.io/add-base-url: "true"
   hosts:
-    - host: dev-csvs.sa-catapult.co.uk
+    - host: staging.solomon.csopenportal.co.uk
       paths:
         - path: /terria-solomon/(.*)
   tls: []
@@ -87,6 +87,7 @@ authentication:
 clientConfig:
   initializationUrls:
   - terria
+  - metoffice
   parameters:
     googleUrlShortenerKey: null
     googleAnalyticsKey: null
@@ -98,35 +99,17 @@ clientConfig:
     brandBarElements: ["", "<a target=\"_blank\" href=\"http://terria.io\"><img src=\"images/SI_high.png\" height=\"52\" title=\"Version: {{version}}\" /></a>", ""]
     supportEmail: "help@example.com"
     proj4ServiceBaseUrl: "proj4def/"
-    feedbackUrl: "feedback"
     mobileDefaultViewerMode: "2d"
     experimentalFeatures: true
     useCesiumIonTerrain: false
     useCesiumIonBingImagery: false
 
-initConfig:
-  homeCamera:
-    north: -5
-    east: 177
-    south: -24
-    west: 152
-  viewerMode: 2d
-  baseMapName: "Positron (Light)"
-  catalog:
-  - name: DRR
-    type: wfs-getCapabilities
-    description: "This group contains DRR vector data for Solomon Island"
-    url: "http://geoserver:8080/geoserver/solomon/ows?service=wfs&version=2.0.0&request=GetCapabilities"
-  - name: "Hazard data"
-    type: wms-getCapabilities
-    description: "This group contains maps of Hazard for Solomon Island"
-    geoserverWorkspace: solomon_rasters
-    url: "http://geoserver:8080/geoserver/solomon_rasters/wms?service=WMS&version=1.3.0&request=GetCapabilities"
-  - name: "DEMs"
-    type: wms-getCapabilities
-    description: "This group contains DEMs for Solomon Island provided by University of Portsmouth"
-    url: "http://geoserver:8080/geoserver/solomon_dems/wms?service=WMS&version=1.3.0&request=GetCapabilities"
-
 serverConfig:
-  geoserverBaseUrl: geoserver:8080
-  geoserverCredentials: "test_user:test_password"
+  port: 3001
+  allowProxyFor:
+  - geoserver:8080
+  - thredds:8080
+  blacklistedAddresses: []
+  proxyAuth:
+    geoserver:8080:
+      authorization: "Basic dGVzdDp0ZXN0"

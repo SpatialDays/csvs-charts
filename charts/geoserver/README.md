@@ -2,7 +2,7 @@ geoserver
 =========
 A Helm chart for deploying GeoServer
 
-Current chart version is `0.12.4`
+Current chart version is `0.23.1`
 
 Source code can be found [here](http://geoserver.org/)
 
@@ -29,11 +29,7 @@ Source code can be found [here](http://geoserver.org/)
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"davidedelerma/geoserver"` |  |
 | imagePullSecrets | list | `[]` |  |
-| ingress.annotations."kubernetes.io/ingress.class" | string | `"nginx"` |  |
-| ingress.enabled | bool | `true` |  |
-| ingress.hosts[0].host | string | `"dev-csvs.sa-catapult.co.uk"` |  |
-| ingress.hosts[0].paths[0].path | string | `"/geoserver"` |  |
-| ingress.tls | list | `[]` |  |
+| ingress.enabled | bool | `false` |  |
 | livenessProbe.enabled | bool | `true` |  |
 | livenessProbe.failureThreshold | int | `6` |  |
 | livenessProbe.initialDelaySeconds | int | `60` |  |
@@ -57,7 +53,12 @@ Source code can be found [here](http://geoserver.org/)
 | pvc.rasters.name | string | `"geoserver-rasters"` |  |
 | pvc.remote.name | string | `"geoserver"` |  |
 | pvc.remote.namespace | string | `"dev-csvs"` |  |
-| pvc.remote.storageClassName | string | `"fast"` |  |
+| pvc.remote.storageClassName | string | `"portworx-csi-sc-retain"` |  |
+| pvc.vectors.enabled | bool | `false` |  |
+| pvc.vectors.name | string | `"geoserver-vectors"` |  |
+| pvc.webinf.enabled | bool | `false` |  |
+| pvc.webinf.name | string | `"geoserver-webinf"` |  |
+| rbac.create | bool | `true` |  |
 | readinessProbe.enabled | bool | `true` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
@@ -68,6 +69,6 @@ Source code can be found [here](http://geoserver.org/)
 | serviceAccount.create | bool | `true` |  |
 | serviceAccount.name | string | `nil` |  |
 | sidecar.image.pullPolicy | string | `"IfNotPresent"` |  |
-| sidecar.image.repository | string | `"davidedelerma/geoserver-commands"` |  |
-| sidecar.image.tag | float | `0.4` |  |
+| sidecar.image.repository | string | `"satapps/geoserver-commands"` |  |
+| sidecar.image.tag | float | `0.8` |  |
 | tolerations | list | `[]` |  |

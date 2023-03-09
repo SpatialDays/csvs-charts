@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ include "geoserver.fullname" . }}
   labels:
@@ -9,6 +9,7 @@ spec:
   selector:
     matchLabels:
       {{- include "geoserver.selectorLabels" . | nindent 6 }}
+  serviceName: "geoserver"
   template:
     metadata:
       labels:
@@ -19,13 +20,19 @@ spec:
         image: "{{ .Values.sidecar.image.repository }}:{{ .Values.sidecar.image.tag }}"
         imagePullPolicy: {{ .Values.sidecar.image.pullPolicy }}
         volumeMounts:
+          - mountPath: "/geoserver_data/data"
+            name:  {{ .Values.pvc.remote.name }}
         {{- if .Values.pvc.rasters.enabled }}
           - mountPath: "/rasters_data"
             name: {{ .Values.pvc.rasters.name }}
         {{- end }}
-        {{- if .Values.pvc.netcdf.enabled }}
-          - mountPath: "/netcdf_data"
-            name: {{ .Values.pvc.netcdf.name }}
+        {{- if .Values.pvc.vectors.enabled }}
+          - mountPath: "/vector_data"
+            name: {{ .Values.pvc.vectors.name }}
+        {{- end }}
+        {{- if .Values.pvc.webinf.enabled }}
+          - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
+            name: {{ .Values.pvc.webinf.name }}
         {{- end }}
         env:
         - name: AWS_ACCESS_KEY_ID
@@ -48,10 +55,14 @@ spec:
           - mountPath: "/rasters_data"
             name: {{ .Values.pvc.rasters.name }}
           {{- end }}
-          {{- if .Values.pvc.netcdf.enabled }}
-          - mountPath: "/netcdf_data"
-            name: {{ .Values.pvc.netcdf.name }}
-          {{- end }}
+        {{- if .Values.pvc.vectors.enabled }}
+          - mountPath: "/vector_data"
+            name: {{ .Values.pvc.vectors.name }}
+        {{- end }}
+        {{- if .Values.pvc.webinf.enabled }}
+          - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
+            name: {{ .Values.pvc.webinf.name }}
+        {{- end }}
         ports:
         - name: http
           containerPort: {{ .Values.service.port }}
@@ -73,18 +84,52 @@ spec:
             path: /geoserver/index.html
             port: http
         {{- end }}
-      volumes:
-        - name: {{ .Values.pvc.remote.name }}
-          persistentVolumeClaim:
-            claimName: {{ .Values.pvc.remote.name }}
-        {{- if .Values.pvc.rasters.enabled }}
-        - name: {{ .Values.pvc.rasters.name }}
-          persistentVolumeClaim:
-            claimName: {{ .Values.pvc.rasters.name }}
+  volumeClaimTemplates:
+    - metadata:
+        name: {{ .Values.pvc.remote.name }}
+      spec:
+        storageClassName: {{ .Values.pvc.remote.storageClassName }}
+        {{- if .Values.local.enabled }}
+        storageClassName: {{ .Values.local.storageClassName | quote }}
+        {{- else }}
+        storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
         {{- end }}
-        {{- if .Values.pvc.netcdf.enabled }}
-        - name: {{ .Values.pvc.netcdf.name }}
-          persistentVolumeClaim:
-            claimName: {{ .Values.pvc.netcdf.name }}
-        {{- end }}
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 10Gi
+    {{- if .Values.pvc.rasters.enabled }}
+    - metadata:
+        name: {{ .Values.pvc.rasters.name }}
+      spec:
+        storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 80Gi
+    {{- end }}
+    {{- if .Values.pvc.vectors.enabled }}
+    - metadata:
+        name: {{ .Values.pvc.vectors.name }}
+      spec:
+        storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 10Gi
+    {{- end }}
+    {{- if .Values.pvc.webinf.enabled }}
+    - metadata:
+        name: {{ .Values.pvc.webinf.name }}
+      spec:
+        storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 5Gi
+    {{- end }}
 
