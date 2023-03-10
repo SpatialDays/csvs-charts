@@ -163,18 +163,8 @@ spec:
           - mountPath: "/usr/local/cmap"
             name:  {{ .Values.pvc.cmapData.name }}
           env:
-          - name: CONCURRENT_REQUESTS
-            value: {{ .Values.sidecar.awsConcurrentRequests | quote }}
-          - name: AWS_ACCESS_KEY_ID
-            valueFrom:
-              secretKeyRef:
-                name: {{ include "thredds.fullname" . }}
-                key: aws-access-key-id
-          - name: AWS_SECRET_ACCESS_KEY
-            valueFrom:
-              secretKeyRef:
-                name: {{ include "thredds.fullname" . }}
-                key: aws-secret-access-key
+          - name: SAS_TOKEN
+            value: {{ .Values.sidecar.sasToken}}
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
