@@ -19,58 +19,6 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-sidecar:
-  image:
-    repository: satapps/csvs-thredds-sidecar
-    tag: '0.15'
-    pullPolicy: IfNotPresent
-  awsConcurrentRequests: 1
-
-pvc:
-  configuration:
-    storageClassName: portworx-csi-sc-retain
-    namespace: dev-csvs
-    name: thredds
-  netcdfMontlyYearly:
-    name: era5-data-monthly-yearly
-    namespace: dev-csvs
-    storageClassName: portworx-csi-sc-retain
-  netcdfDaily1:
-    name: era5-data-daily-part-1
-    namespace: dev-csvs
-    storageClassName: portworx-csi-sc-retain
-  netcdfDaily2:
-    name: era5-data-daily-part-2
-    namespace: dev-csvs
-    storageClassName: portworx-csi-sc-retain
-  netcdfDaily3:
-    name: era5-data-daily-part-3
-    namespace: dev-csvs
-    storageClassName: portworx-csi-sc-retain
-  era5LandData:
-    name: era5-land-data
-    namespace: dev-csvs
-    storageClassName: portworx-csi-sc-retain
-  trmmData:
-    name: trmm-data
-    namespace: dev-csvs
-    storageClassName: portworx-csi-sc-retain
-  ncepData:
-    name: ncep-data
-    namespace: dev-csvs
-    storageClassName: portworx-csi-sc-retain
-  gpcpData:
-    name: gpcp-data
-    namespace: dev-csvs
-    storageClassName: portworx-csi-sc-retain
-  cruData:
-    name: cru-data
-    namespace: dev-csvs
-    storageClassName: portworx-csi-sc-retain
-  cmapData:
-    name: cmap-data
-    namespace: dev-csvs
-    storageClassName: portworx-csi-sc-retain
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -94,9 +42,6 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-service:
-  type: ClusterIP
-  port: 8081
 
 ingress:
   enabled: false
@@ -152,5 +97,4 @@ readinessProbe:
   failureThreshold: 6
   successThreshold: 1
 
-awsAccessKeyId: test
-awsSecretAccessKey: test
+
