@@ -16,120 +16,86 @@ spec:
         {{- include "geoserver.selectorLabels" . | nindent 8 }}
     spec:
       containers:
-      - name: {{ .Chart.Name }}-sidecar
-        image: "{{ .Values.sidecar.image.repository }}:{{ .Values.sidecar.image.tag }}"
-        imagePullPolicy: {{ .Values.sidecar.image.pullPolicy }}
-        volumeMounts:
-          - mountPath: "/geoserver_data/data"
-            name:  {{ .Values.pvc.remote.name }}
-        {{- if .Values.pvc.rasters.enabled }}
-          - mountPath: "/rasters_data"
-            name: {{ .Values.pvc.rasters.name }}
-        {{- end }}
-        {{- if .Values.pvc.vectors.enabled }}
-          - mountPath: "/vector_data"
-            name: {{ .Values.pvc.vectors.name }}
-        {{- end }}
-        {{- if .Values.pvc.webinf.enabled }}
-          - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
-            name: {{ .Values.pvc.webinf.name }}
-        {{- end }}
-        env:
-        - name: AWS_ACCESS_KEY_ID
-          valueFrom:
-            secretKeyRef:
-              name: {{ include "geoserver.fullname" . }}
-              key: aws-access-key-id
-        - name: AWS_SECRET_ACCESS_KEY
-          valueFrom:
-            secretKeyRef:
-              name: {{ include "geoserver.fullname" . }}
-              key: aws-secret-access-key
+      # - name: {{ .Chart.Name }}-sidecar
+      #   image: "{{ .Values.sidecar.image.repository }}:{{ .Values.sidecar.image.tag }}"
+      #   imagePullPolicy: {{ .Values.sidecar.image.pullPolicy }}
+      #   volumeMounts:
+      #     - mountPath: "/geoserver_data/data"
+      #       name:  {{ .Values.pvc.remoteData.name }}
+      #   {{- if .Values.pvc.rasters.enabled }}
+      #     - mountPath: "/rasters_data"
+      #       name: {{ .Values.pvc.rasters.name }}
+      #   {{- end }}
+      #   {{- if .Values.pvc.vectors.enabled }}
+      #     - mountPath: "/vector_data"
+      #       name: {{ .Values.pvc.vectors.name }}
+      #   {{- end }}
+      #   {{- if .Values.pvc.webinf.enabled }}
+      #     - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
+      #       name: {{ .Values.pvc.webinf.name }}
+      #   {{- end }}
+      #   env:
+      #   - name: AWS_ACCESS_KEY_ID
+      #     valueFrom:
+      #       secretKeyRef:
+      #         name: {{ include "geoserver.fullname" . }}
+      #         key: aws-access-key-id
+      #   - name: AWS_SECRET_ACCESS_KEY
+      #     valueFrom:
+      #       secretKeyRef:
+      #         name: {{ include "geoserver.fullname" . }}
+      #         key: aws-secret-access-key
       - name: {{ .Chart.Name }}
-        image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         volumeMounts:
           - mountPath: "/geoserver_data/data"
-            name:  {{ .Values.pvc.remote.name }}
-          {{- if .Values.pvc.rasters.enabled }}
+            name:  {{ .Values.pvc.remoteData.name }}
           - mountPath: "/rasters_data"
             name: {{ .Values.pvc.rasters.name }}
-          {{- end }}
-        {{- if .Values.pvc.vectors.enabled }}
           - mountPath: "/vector_data"
             name: {{ .Values.pvc.vectors.name }}
-        {{- end }}
-        {{- if .Values.pvc.webinf.enabled }}
           - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
             name: {{ .Values.pvc.webinf.name }}
-        {{- end }}
         ports:
         - name: http
           containerPort: {{ .Values.service.port }}
           protocol: TCP
-        {{- if .Values.livenessProbe.enabled }}
-        livenessProbe:
-          httpGet:
-            path: /geoserver/index.html
-            port: http
-          initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
-          periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
-          timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
-          successThreshold: {{ .Values.livenessProbe.successThreshold }}
-          failureThreshold: {{ .Values.livenessProbe.failureThreshold }}
-        {{- end }}
-        {{- if .Values.readinessProbe.enabled }}
-        readinessProbe:
-          httpGet:
-            path: /geoserver/index.html
-            port: http
-        {{- end }}
   volumeClaimTemplates:
     - metadata:
-        name: {{ .Values.pvc.remote.name }}
+        name: {{ .Values.pvc.remoteData.name }}
       spec:
-        storageClassName: {{ .Values.pvc.remote.storageClassName }}
-        {{- if .Values.local.enabled }}
-        storageClassName: {{ .Values.local.storageClassName | quote }}
-        {{- else }}
-        storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
-        {{- end }}
+        storageClassName: {{ .Values.pvc.remoteData.storageClassName }}
         accessModes:
           - ReadWriteOnce
         resources:
           requests:
             storage: 10Gi
-    {{- if .Values.pvc.rasters.enabled }}
     - metadata:
         name: {{ .Values.pvc.rasters.name }}
       spec:
-        storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
+        storageClassName: {{ .Values.pvc.remoteData.storageClassName | quote }}
         accessModes:
           - ReadWriteOnce
         resources:
           requests:
             storage: 80Gi
-    {{- end }}
-    {{- if .Values.pvc.vectors.enabled }}
     - metadata:
         name: {{ .Values.pvc.vectors.name }}
       spec:
-        storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
+        storageClassName: {{ .Values.pvc.remoteData.storageClassName | quote }}
         accessModes:
           - ReadWriteOnce
         resources:
           requests:
             storage: 10Gi
-    {{- end }}
-    {{- if .Values.pvc.webinf.enabled }}
     - metadata:
         name: {{ .Values.pvc.webinf.name }}
       spec:
-        storageClassName: {{ .Values.pvc.remote.storageClassName | quote }}
+        storageClassName: {{ .Values.pvc.remoteData.storageClassName | quote }}
         accessModes:
           - ReadWriteOnce
         resources:
           requests:
             storage: 5Gi
-    {{- end }}
 
