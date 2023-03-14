@@ -39,7 +39,7 @@ spec:
                 - ReadWriteOnce
               resources:
                 requests:
-                  storage: 200Gi
+                  storage: 500Gi
           - metadata: 
               name: {{ .Values.pvc.netcdfDaily2.name }}
             spec:
@@ -48,7 +48,7 @@ spec:
                 - ReadWriteOnce
               resources:
                 requests:
-                  storage: 200Gi
+                  storage: 500Gi
           - metadata: 
               name: {{ .Values.pvc.netcdfDaily3.name }}
             spec:
@@ -57,7 +57,7 @@ spec:
                 - ReadWriteOnce
               resources:
                 requests:
-                  storage: 200Gi
+                  storage: 500Gi
           - metadata:
               name: {{ .Values.pvc.era5LandData.name }}
             spec:
@@ -66,7 +66,7 @@ spec:
                 - ReadWriteOnce
               resources:
                 requests:
-                  storage: 200Gi
+                  storage: 500Gi
           - metadata:
               name: {{ .Values.pvc.trmmData.name }}
             spec:
@@ -139,7 +139,7 @@ spec:
       containers:
         - name: {{ .Chart.Name }}-sidecar
           image: "{{ .Values.sidecar.image.repository }}:{{ .Values.sidecar.image.tag }}"
-          imagePullPolicy: {{ .Values.sidecar.image.pullPolicy }}
+          imagePullPolicy: Always
           command: ["tail", "-f", "/dev/null"]
           volumeMounts:
           - mountPath: "/usr/local/monthly-yearly-data"

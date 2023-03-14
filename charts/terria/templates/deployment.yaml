@@ -49,8 +49,8 @@ spec:
               mountPath: /etc/config/client
             - name: terriamap-config-server
               mountPath: /etc/config/server
-            # - name: terriamap-init-config
-            #   mountPath: /usr/src/app/wwwroot/init
+            - name: terriamap-init-config
+              mountPath: /usr/src/app/wwwroot/init
           ports:
             - name: http
               containerPort: {{ .Values.serverConfig.port }}
