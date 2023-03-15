@@ -16,24 +16,24 @@ spec:
         {{- include "geoserver.selectorLabels" . | nindent 8 }}
     spec:
       containers:
-      # - name: {{ .Chart.Name }}-sidecar
-      #   image: "{{ .Values.sidecar.image.repository }}:{{ .Values.sidecar.image.tag }}"
-      #   imagePullPolicy: {{ .Values.sidecar.image.pullPolicy }}
-      #   volumeMounts:
-      #     - mountPath: "/geoserver_data/data"
-      #       name:  {{ .Values.pvc.remoteData.name }}
-      #   {{- if .Values.pvc.rasters.enabled }}
-      #     - mountPath: "/rasters_data"
-      #       name: {{ .Values.pvc.rasters.name }}
-      #   {{- end }}
-      #   {{- if .Values.pvc.vectors.enabled }}
-      #     - mountPath: "/vector_data"
-      #       name: {{ .Values.pvc.vectors.name }}
-      #   {{- end }}
-      #   {{- if .Values.pvc.webinf.enabled }}
-      #     - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
-      #       name: {{ .Values.pvc.webinf.name }}
-      #   {{- end }}
+      - name: {{ .Chart.Name }}-sidecar
+        # image: "{{ .Values.sidecar.image.repository }}:{{ .Values.sidecar.image.tag }}"
+        image: "ivicamaticsd/csvs-geoserver-sidecar:latest"
+        #imagePullPolicy: {{ .Values.sidecar.image.pullPolicy }}
+        imagePullPolicy: Always
+        volumeMounts:
+          - mountPath: "/geoserver_data/data"
+            name:  {{ .Values.pvc.remoteData.name }}
+          - mountPath: "/rasters_data"
+            name: {{ .Values.pvc.rasters.name }}
+          - mountPath: "/vector_data"
+            name: {{ .Values.pvc.vectors.name }}
+          - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
+            name: {{ .Values.pvc.webinf.name }}
+        # env:
+        #   - name: SAS_TOKEN
+        #   - name: BACKUP_AZURE_CONTAINER_URL
+        #     value: "https://csvsdata.blob.core.windows.net/csvs-backups"
       #   env:
       #   - name: AWS_ACCESS_KEY_ID
       #     valueFrom:
@@ -47,7 +47,12 @@ spec:
       #         key: aws-secret-access-key
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        imagePullPolicy: Always
+        env: #GEOSERVER_ADMIN_USER=admin --env GEOSERVER_ADMIN_PASSWORD=myawesomegeoserver
+          - name: GEOSERVER_ADMIN_USER
+            value: "admin"
+          - name: GEOSERVER_ADMIN_PASSWORD
+            value: "geoserver"
         volumeMounts:
           - mountPath: "/geoserver_data/data"
             name:  {{ .Values.pvc.remoteData.name }}
@@ -55,8 +60,8 @@ spec:
             name: {{ .Values.pvc.rasters.name }}
           - mountPath: "/vector_data"
             name: {{ .Values.pvc.vectors.name }}
-          - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
-            name: {{ .Values.pvc.webinf.name }}
+        #   - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
+        #     name: {{ .Values.pvc.webinf.name }}
         ports:
         - name: http
           containerPort: {{ .Values.service.port }}

@@ -5,8 +5,9 @@
 replicaCount: 1
 
 image:
-  repository: davidedelerma/geoserver
-  pullPolicy: IfNotPresent
+  repository: ivicamaticsd/csvs-geoserver
+  tag: "latest"
+  pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""
@@ -35,7 +36,7 @@ securityContext:
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 8080
 
 ingress:
@@ -95,29 +96,40 @@ awsAccessKeyId: test
 awsSecretAccessKey: test
 
 pvc:
-  remote:
-    storageClassName: portworx-csi-sc-retain
-    namespace: dev-csvs
-    name: geoserver
+  webinf:
+    name: geoserver-webinf
+    storageClassName: geoserver-webinf-data-pvc-storage-class
+  vectors:
+    name: geoserver-vectors
+    storageClassName: geoserver-vectors-data-pvc-storage-class
   rasters:
-    enabled: false
     name: geoserver-rasters
+    storageClassName: geoserver-rasters-data-pvc-storage-class
+  remoteData:
+    name: geoserver-remote-data
+    storageClassName: geoserver-remote-data-pvc-storage-class
+    
+  
 
-local:
-  enabled: false
-  storageClassName: manual
-  hostPath: /c/Users/Davide.DeLerma/projects/kube_geoserver_dir/
+# pvc:
+#   remote:
+#     storageClassName: portworx-csi-sc-retain
+#     namespace: dev-csvs
+#     name: geoserver
+#   rasters:
+#     enabled: false
+#     name: geoserver-rasters
 
-livenessProbe:
-  enabled: true
-  initialDelaySeconds: 60
-  periodSeconds: 10
-  timeoutSeconds: 5
-  failureThreshold: 6
-  successThreshold: 1
+# livenessProbe:
+#   enabled: true
+#   initialDelaySeconds: 60
+#   periodSeconds: 10
+#   timeoutSeconds: 5
+#   failureThreshold: 6
+#   successThreshold: 1
 
-readinessProbe:
-  enabled: true
+# readinessProbe:
+#   enabled: true
 
 ## Role Based Access for a ServiceAccount
 ## ref: https://kubernetes.io/docs/admin/authorization/rbac/
@@ -129,11 +141,11 @@ rbac:
   ##
   create: true
 
-postgres:
-  postgresqlUsername: geoserver
-  postgresqlPassword: supersecret
-  awsAccessKeyId: test
-  awsSecretAccessKey: test
-  s3url: http://s3-uk-1.sa-catapult.co.uk
-  s3bucket: csvs-backups
-  namespace: dev-csvs
+# postgres:
+#   postgresqlUsername: geoserver
+#   postgresqlPassword: supersecret
+#   awsAccessKeyId: test
+#   awsSecretAccessKey: test
+#   s3url: http://s3-uk-1.sa-catapult.co.uk
+#   s3bucket: csvs-backups
+#   namespace: dev-csvs
