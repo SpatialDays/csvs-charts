@@ -4,10 +4,10 @@
 
 replicaCount: 1
 
-initImage:
-  repository: satapps/init-thredds
-  tag: '851fae8'
-  pullPolicy: IfNotPresent
+# initImage:
+#   repository: satapps/init-thredds
+#   tag: '851fae8'
+#   pullPolicy: IfNotPresent
 
 image:
   repository: unidata/thredds-docker
