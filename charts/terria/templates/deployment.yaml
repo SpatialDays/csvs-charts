@@ -46,7 +46,8 @@ spec:
           command: ["node", "./node_modules/terriajs-server/lib/app.js", "--config-file", "/etc/config/server/serverconfig.json"]
           volumeMounts:
             - name: terriamap-config-client
-              mountPath: /etc/config/client
+              mountPath: /usr/src/app/wwwroot/config.json
+              subPath: config.json
             - name: terriamap-config-server
               mountPath: /etc/config/server
             - name: terriamap-init-config
