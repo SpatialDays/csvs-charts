@@ -1,20 +1,20 @@
-
-
+{{ if .Values.ingress.enabled}}
 
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 
 metadata:
-  name: geoserver
+  name: {{.Values.ingress.domain}}
   namespace: csvs
   annotations:
     kubernetes.io/ingress.class: azure/application-gateway
-    cert-manager.io/cluster-issuer: letsencrypt-staging
+    {{ if .Values.ingress.ssl.enabled }}
+    cert-manager.io/cluster-issuer: {{.Values.ingress.ssl.clusterIssuerName}}
     cert-manager.io/acme-challenge-type: dns01
-    # appgw.ingress.kubernetes.io/hostname-extension : "staging.geoserver.csopenportal.co.uk"
+    {{end}}
 spec:
   rules:
-  - host: staging.geoserver.csopenportal.co.uk
+  - host: {{.Values.ingress.domain}}
     http:
       paths:
       - backend:
@@ -24,9 +24,12 @@ spec:
               number: 80
         path: /
         pathType: ImplementationSpecific
+  {{ if .Values.ingress.ssl.enabled }}
   tls:
   - hosts:
-    - staging.geoserver.csopenportal.co.uk
+    - {{.Values.ingress.domain}}
     secretName: ssl-csopenportal-cert
+  {{end}}
 
-    
+
+  {{ end }}
