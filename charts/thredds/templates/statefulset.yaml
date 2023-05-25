@@ -22,96 +22,7 @@ spec:
               resources:
                 requests:
                   storage: 5Gi
-          - metadata: 
-              name: {{ .Values.pvc.netcdfMontlyYearly.name }}
-            spec:
-              storageClassName: {{ .Values.pvc.netcdfMontlyYearly.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 200Gi
-          - metadata: 
-              name: {{ .Values.pvc.netcdfDaily1.name }} # malformed
-            spec:
-              storageClassName: {{ .Values.pvc.netcdfDaily1.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 500Gi
-          - metadata: 
-              name: {{ .Values.pvc.netcdfDaily2.name }}
-            spec:
-              storageClassName: {{ .Values.pvc.netcdfDaily2.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 500Gi
-          - metadata: 
-              name: {{ .Values.pvc.netcdfDaily3.name }}
-            spec:
-              storageClassName: {{ .Values.pvc.netcdfDaily2.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 500Gi
-          - metadata:
-              name: {{ .Values.pvc.era5LandData.name }}
-            spec:
-              storageClassName: {{ .Values.pvc.era5LandData.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 500Gi
-          - metadata:
-              name: {{ .Values.pvc.trmmData.name }}
-            spec:
-              storageClassName: {{ .Values.pvc.trmmData.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 20Gi
-          - metadata:
-              name: {{ .Values.pvc.ncepData.name }}
-            spec:
-              storageClassName: {{ .Values.pvc.ncepData.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 5Gi
-          - metadata:
-              name: {{ .Values.pvc.gpcpData.name }} # missing
-            spec:
-              storageClassName: {{ .Values.pvc.gpcpData.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 5Gi
-          - metadata:
-              name: {{ .Values.pvc.cruData.name }} # missing
-            spec:
-              storageClassName: {{ .Values.pvc.cruData.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 25Gi
-          - metadata:
-              name: {{ .Values.pvc.cmapData.name }} # missing
-            spec:
-              storageClassName: {{ .Values.pvc.cmapData.storageClassName | quote }}
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 5Gi
+          
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -125,6 +36,43 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+     apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "thredds.fullname" . }}
+  labels:
+    {{- include "thredds.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "thredds.selectorLabels" . | nindent 6 }}
+  serviceName: "thredds"
+  volumeClaimTemplates:
+    - metadata:
+        name: {{ .Values.pvc.configuration.name }}
+      spec:
+        storageClassName: {{ .Values.pvc.configuration.storageClassName | quote }}
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 5Gi
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "thredds.selectorLabels" . | nindent 8 }}
+    spec:
+      volumes:
+        - name: storage-volume
+          persistentVolumeClaim:
+            claimName: pvc-thredds-storage-container
       serviceAccountName: {{ include "thredds.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
@@ -137,62 +85,16 @@ spec:
           mountPath: "/thredds-content"
         command: ["cp", "-r", "thredds", "thredds-content"]
       containers:
-        - name: {{ .Chart.Name }}-sidecar
-          image: "{{ .Values.sidecar.image.repository }}:{{ .Values.sidecar.image.tag }}"
-          imagePullPolicy: Always
-          command: ["tail", "-f", "/dev/null"]
-          volumeMounts:
-          - mountPath: "/usr/local/monthly-yearly-data"
-            name:  {{ .Values.pvc.netcdfMontlyYearly.name }}
-          - mountPath: "/usr/local/daily-1-data"
-            name:  {{ .Values.pvc.netcdfDaily1.name }}
-          - mountPath: "/usr/local/daily-2-data"
-            name:  {{ .Values.pvc.netcdfDaily2.name }}
-          - mountPath: "/usr/local/daily-3-data"
-            name:  {{ .Values.pvc.netcdfDaily3.name }}
-          - mountPath: "/usr/local/era5-land"
-            name:  {{ .Values.pvc.era5LandData.name }}
-          - mountPath: "/usr/local/trmm"
-            name:  {{ .Values.pvc.trmmData.name }}
-          - mountPath: "/usr/local/ncep"
-            name:  {{ .Values.pvc.ncepData.name }}
-          - mountPath: "/usr/local/gpcp"
-            name:  {{ .Values.pvc.gpcpData.name }}
-          - mountPath: "/usr/local/cru"
-            name:  {{ .Values.pvc.cruData.name }}
-          - mountPath: "/usr/local/cmap"
-            name:  {{ .Values.pvc.cmapData.name }}
-          env:
-          - name: SAS_TOKEN
-            value: {{ .Values.sidecar.sasToken}}
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           volumeMounts:
+          - mountPath: "/data"
+            name: storage-volume
           - mountPath: "/usr/local/tomcat/content"
             name:  {{ .Values.pvc.configuration.name }}
-          - mountPath: "/usr/local/monthly-yearly-data"
-            name:  {{ .Values.pvc.netcdfMontlyYearly.name }}
-          - mountPath: "/usr/local/daily-1-data"
-            name:  {{ .Values.pvc.netcdfDaily1.name }}
-          - mountPath: "/usr/local/daily-2-data"
-            name:  {{ .Values.pvc.netcdfDaily2.name }}
-          - mountPath: "/usr/local/daily-3-data"
-            name:  {{ .Values.pvc.netcdfDaily3.name }}
-          - mountPath: "/usr/local/era5-land"
-            name:  {{ .Values.pvc.era5LandData.name }}
-          - mountPath: "/usr/local/trmm"
-            name:  {{ .Values.pvc.trmmData.name }}
-          - mountPath: "/usr/local/ncep"
-            name:  {{ .Values.pvc.ncepData.name }}
-          - mountPath: "/usr/local/gpcp"
-            name:  {{ .Values.pvc.gpcpData.name }}
-          - mountPath: "/usr/local/cru"
-            name:  {{ .Values.pvc.cruData.name }}
-          - mountPath: "/usr/local/cmap"
-            name:  {{ .Values.pvc.cmapData.name }}
           ports:
             - name: liveness-port
               containerPort: {{ .Values.service.port }}
@@ -221,6 +123,10 @@ spec:
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
