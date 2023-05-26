@@ -15,6 +15,13 @@ spec:
       labels:
         {{- include "geoserver.selectorLabels" . | nindent 8 }}
     spec:
+      volumes: 
+        - name: rasters-data-storage-volume
+          persistentVolumeClaim:
+            claimName: pvc-geoserver-vector-data-storage-container
+        - name: vectors-data-storage-volume
+          persistentVolumeClaim:
+            claimName: pvc-geoserver-rasters-data-storage-container
       containers:
       - name: {{ .Chart.Name }}-sidecar
         # image: "{{ .Values.sidecar.image.repository }}:{{ .Values.sidecar.image.tag }}"
@@ -24,24 +31,32 @@ spec:
         volumeMounts:
           - mountPath: "/geoserver_data/data"
             name:  {{ .Values.pvc.remoteData.name }}
-          - mountPath: "/rasters_data"
-            name: {{ .Values.pvc.rasters.name }}
-          - mountPath: "/vector_data"
-            name: {{ .Values.pvc.vectors.name }}
+          # - mountPath: "/rasters_data"
+          #   name: {{ .Values.pvc.rasters.name }}
+          # - mountPath: "/vector_data"
+          #   name: {{ .Values.pvc.vectors.name }}
           - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
             name: {{ .Values.pvc.webinf.name }}
+          - mountPath: "/rasters_data"
+            name: rasters-data-storage-volume
+          - mountPath: "/vector_data"
+            name: vectors-data-storage-volume
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: Always
         volumeMounts:
           - mountPath: "/geoserver_data/data"
             name:  {{ .Values.pvc.remoteData.name }}
-          - mountPath: "/rasters_data"
-            name: {{ .Values.pvc.rasters.name }}
-          - mountPath: "/vector_data"
-            name: {{ .Values.pvc.vectors.name }}
+          # - mountPath: "/rasters_data"
+          #   name: {{ .Values.pvc.rasters.name }}
+          # - mountPath: "/vector_data"
+          #   name: {{ .Values.pvc.vectors.name }}
         #   - mountPath: "/usr/local/tomcat/webapps/geoserver/WEB-INF"
         #     name: {{ .Values.pvc.webinf.name }}
+          - mountPath: "/rasters_data"
+            name: rasters-data-storage-volume
+          - mountPath: "/vectors_data"
+            name: vectors-data-storage-volume
         ports:
         - name: http
           containerPort: 8080
@@ -56,24 +71,24 @@ spec:
         resources:
           requests:
             storage: 10Gi
-    - metadata:
-        name: {{ .Values.pvc.rasters.name }}
-      spec:
-        storageClassName: {{ .Values.pvc.remoteData.storageClassName | quote }}
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 80Gi
-    - metadata:
-        name: {{ .Values.pvc.vectors.name }}
-      spec:
-        storageClassName: {{ .Values.pvc.remoteData.storageClassName | quote }}
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 10Gi
+    # - metadata:
+    #     name: {{ .Values.pvc.rasters.name }}
+    #   spec:
+    #     storageClassName: {{ .Values.pvc.remoteData.storageClassName | quote }}
+    #     accessModes:
+    #       - ReadWriteOnce
+    #     resources:
+    #       requests:
+    #         storage: 80Gi
+    # - metadata:
+    #     name: {{ .Values.pvc.vectors.name }}
+    #   spec:
+    #     storageClassName: {{ .Values.pvc.remoteData.storageClassName | quote }}
+    #     accessModes:
+    #       - ReadWriteOnce
+    #     resources:
+    #       requests:
+    #         storage: 10Gi
     - metadata:
         name: {{ .Values.pvc.webinf.name }}
       spec:
