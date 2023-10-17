@@ -142,6 +142,8 @@ spec:
           imagePullPolicy: Always
           command: ["tail", "-f", "/dev/null"]
           volumeMounts:
+          - mountPath: "/usr/local/tomcat/content"
+            name:  {{ .Values.pvc.configuration.name }}
           - mountPath: "/usr/local/monthly-yearly-data"
             name:  {{ .Values.pvc.netcdfMontlyYearly.name }}
           - mountPath: "/usr/local/daily-1-data"

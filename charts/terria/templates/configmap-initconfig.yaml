@@ -7,4 +7,3 @@ metadata:
 data:
   terria.json: '{{ toJson .Values.initConfig | indent 2 }}'
   metoffice.json: '{{ toJson .Values.initMetofficeConfig | indent 2 }}'
-  simple.json: '{}'
